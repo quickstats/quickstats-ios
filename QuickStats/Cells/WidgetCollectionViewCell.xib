@@ -51,8 +51,9 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="130" height="122"/>
             <connections>
-                <outlet property="ownerLabel" destination="0Mt-wL-toY" id="WEg-rM-LTI"/>
+                <outlet property="iconView" destination="QHF-3g-f5T" id="KxH-1Z-bde"/>
                 <outlet property="titleLabel" destination="esf-V0-9zc" id="LmS-3g-GpD"/>
+                <outlet property="valueLabel" destination="0Mt-wL-toY" id="WEg-rM-LTI"/>
             </connections>
             <point key="canvasLocation" x="189.85507246376812" y="110.49107142857143"/>
         </collectionViewCell>

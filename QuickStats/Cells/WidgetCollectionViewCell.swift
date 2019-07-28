@@ -7,19 +7,35 @@
 //
 
 import UIKit
+import SDWebImage
 
 class WidgetCollectionViewCell: UICollectionViewCell {
 
     var widget: Widget? {
         didSet {
             titleLabel.text = widget?.title
-            ownerLabel.text = widget?.owner
+
+            switch widget!.type {
+            case .Countdown:
+                let formatter = DateComponentsFormatter()
+                formatter.allowedUnits = [.day, .hour, .minute, .second]
+                formatter.unitsStyle = .positional
+                formatter.zeroFormattingBehavior = .dropLeading
+                let duration = widget!.timestamp.timeIntervalSinceNow
+                valueLabel.text = formatter.string(from: duration)
+            default:
+                let formatter = NumberFormatter()
+                formatter.groupingSeparator = " "
+                formatter.numberStyle = .decimal
+                valueLabel.text = formatter.string(for: widget!.value)
+            }
         }
     }
 
     @IBOutlet weak var titleLabel: UILabel!
 
-    @IBOutlet weak var ownerLabel: UILabel!
+    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var valueLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
