@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 enum WidgetDetailRows: Int {
     // Properties
@@ -99,6 +100,17 @@ class WidgetDetailViewController: UITableViewController, Storyboarded {
             return true
         default:
             return false
+        }
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = sections[indexPath.section].list[indexPath.row]
+        switch section {
+        case .samples:
+            let view = SampleViewController.instantiate()
+            view.widget = widget
+            navigationController?.pushViewController(view, animated: true)
+        default:
+            print("unknown section")
         }
     }
 }
