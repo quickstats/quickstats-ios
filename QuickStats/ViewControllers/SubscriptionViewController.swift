@@ -65,4 +65,11 @@ extension SubscriptionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 128, height: 128)
     }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let widgetDetail = WidgetDetailViewController.instantiate()
+        widgetDetail.widget = subscriptions?[indexPath.row]
+        let navigation = UINavigationController(rootViewController: widgetDetail)
+        navigation.modalPresentationStyle = .formSheet
+        present(navigation, animated: true, completion: nil)
+    }
 }

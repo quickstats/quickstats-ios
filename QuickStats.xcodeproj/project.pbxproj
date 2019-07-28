@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		87BB90F522ED81040078EFEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB90F322ED81040078EFEB /* Main.storyboard */; };
 		87BB90F722ED81060078EFEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB90F622ED81060078EFEB /* Assets.xcassets */; };
 		87BB90FA22ED81060078EFEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB90F822ED81060078EFEB /* LaunchScreen.storyboard */; };
+		87D0853622ED9C8000D6A881 /* WidgetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D0853522ED9C8000D6A881 /* WidgetDetailViewController.swift */; };
 		BFA6FFC460D21D1CBF7258A2 /* Pods_QuickStats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD23A73B7C935D2B3D583EE8 /* Pods_QuickStats.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		87BB90F622ED81060078EFEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87BB90F922ED81060078EFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87BB90FB22ED81060078EFEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87D0853522ED9C8000D6A881 /* WidgetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDetailViewController.swift; sourceTree = "<group>"; };
 		FD23A73B7C935D2B3D583EE8 /* Pods_QuickStats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickStats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 				872748BE22ED81E8005B7678 /* LoginViewController.swift */,
 				87BB90F322ED81040078EFEB /* Main.storyboard */,
 				87BB90F122ED81040078EFEB /* SubscriptionViewController.swift */,
+				87D0853522ED9C8000D6A881 /* WidgetDetailViewController.swift */,
 				872748D522ED93D1005B7678 /* WidgetListViewController.swift */,
 			);
 			path = ViewControllers;
@@ -147,7 +150,6 @@
 				377E8A0B5E070290685FC8D8 /* Pods-QuickStats.debug.xcconfig */,
 				2BBF499F1E5776A7A715BE3F /* Pods-QuickStats.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -281,6 +283,7 @@
 				872748CB22ED8BB8005B7678 /* Extensions.swift in Sources */,
 				872748D422ED8E56005B7678 /* CollectionView+RegisterXib.swift in Sources */,
 				872748D622ED93D1005B7678 /* WidgetListViewController.swift in Sources */,
+				87D0853622ED9C8000D6A881 /* WidgetDetailViewController.swift in Sources */,
 				872748C222ED839D005B7678 /* Settings.swift in Sources */,
 				872748C722ED89A6005B7678 /* API.swift in Sources */,
 				87BB90F022ED81040078EFEB /* AppDelegate.swift in Sources */,
