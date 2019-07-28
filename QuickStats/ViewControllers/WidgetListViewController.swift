@@ -46,11 +46,17 @@ extension WidgetListViewController: UICollectionViewDelegateFlowLayout {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withIdentifier: WidgetCollectionViewCell.self, for: indexPath)
         cell.widget = subscriptions?[indexPath.row]
-        cell.sizeToFit()
+//        cell.sizeToFit()
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 128, height: 128)
+        // 10 Gives us our border around the edges
+        let width = (UIScreen.main.bounds.width - 10) / 3
+
+        if width > 128 {
+            return CGSize(width: 128, height: 128)
+        }
+        return CGSize(width: width, height: width)
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let widgetDetail = WidgetDetailViewController.instantiate()

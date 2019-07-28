@@ -63,7 +63,13 @@ extension SubscriptionViewController: UICollectionViewDelegateFlowLayout {
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 128, height: 128)
+        // 10 Gives us our border around the edges
+        let width = (UIScreen.main.bounds.width - 10) / 3
+
+        if width > 128 {
+            return CGSize(width: 128, height: 128)
+        }
+        return CGSize(width: width, height: width)
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let widgetDetail = WidgetDetailViewController.instantiate()
