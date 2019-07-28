@@ -7,17 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		872748BF22ED81E8005B7678 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748BE22ED81E8005B7678 /* LoginViewController.swift */; };
+		872748C222ED839D005B7678 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748C122ED839D005B7678 /* Settings.swift */; };
+		872748C522ED8551005B7678 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748C422ED8551005B7678 /* Storyboarded.swift */; };
+		872748C722ED89A6005B7678 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748C622ED89A6005B7678 /* API.swift */; };
+		872748C922ED8B69005B7678 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748C822ED8B69005B7678 /* Widget.swift */; };
+		872748CB22ED8BB8005B7678 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748CA22ED8BB8005B7678 /* Extensions.swift */; };
+		872748CF22ED8D5B005B7678 /* WidgetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748CD22ED8D5B005B7678 /* WidgetCollectionViewCell.swift */; };
+		872748D022ED8D5B005B7678 /* WidgetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 872748CE22ED8D5B005B7678 /* WidgetCollectionViewCell.xib */; };
+		872748D422ED8E56005B7678 /* CollectionView+RegisterXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748D322ED8E56005B7678 /* CollectionView+RegisterXib.swift */; };
+		872748D622ED93D1005B7678 /* WidgetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748D522ED93D1005B7678 /* WidgetListViewController.swift */; };
 		87BB90F022ED81040078EFEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB90EF22ED81040078EFEB /* AppDelegate.swift */; };
-		87BB90F222ED81040078EFEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB90F122ED81040078EFEB /* ViewController.swift */; };
+		87BB90F222ED81040078EFEB /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB90F122ED81040078EFEB /* SubscriptionViewController.swift */; };
 		87BB90F522ED81040078EFEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB90F322ED81040078EFEB /* Main.storyboard */; };
 		87BB90F722ED81060078EFEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB90F622ED81060078EFEB /* Assets.xcassets */; };
 		87BB90FA22ED81060078EFEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB90F822ED81060078EFEB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		872748BE22ED81E8005B7678 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		872748C122ED839D005B7678 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		872748C422ED8551005B7678 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		872748C622ED89A6005B7678 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		872748C822ED8B69005B7678 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
+		872748CA22ED8BB8005B7678 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		872748CD22ED8D5B005B7678 /* WidgetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetCollectionViewCell.swift; sourceTree = "<group>"; };
+		872748CE22ED8D5B005B7678 /* WidgetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetCollectionViewCell.xib; sourceTree = "<group>"; };
+		872748D322ED8E56005B7678 /* CollectionView+RegisterXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+RegisterXib.swift"; sourceTree = "<group>"; };
+		872748D522ED93D1005B7678 /* WidgetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetListViewController.swift; sourceTree = "<group>"; };
 		87BB90EC22ED81040078EFEB /* QuickStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB90EF22ED81040078EFEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		87BB90F122ED81040078EFEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		87BB90F122ED81040078EFEB /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		87BB90F422ED81040078EFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87BB90F622ED81060078EFEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87BB90F922ED81060078EFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,11 +55,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		872748BD22ED8177005B7678 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				872748BE22ED81E8005B7678 /* LoginViewController.swift */,
+				87BB90F322ED81040078EFEB /* Main.storyboard */,
+				87BB90F122ED81040078EFEB /* SubscriptionViewController.swift */,
+				872748D522ED93D1005B7678 /* WidgetListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		872748C022ED8386005B7678 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				872748C622ED89A6005B7678 /* API.swift */,
+				872748CA22ED8BB8005B7678 /* Extensions.swift */,
+				872748C122ED839D005B7678 /* Settings.swift */,
+				872748C422ED8551005B7678 /* Storyboarded.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		872748CC22ED8BC4005B7678 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				872748C822ED8B69005B7678 /* Widget.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		872748D122ED8D62005B7678 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				872748CD22ED8D5B005B7678 /* WidgetCollectionViewCell.swift */,
+				872748CE22ED8D5B005B7678 /* WidgetCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		872748D222ED8E41005B7678 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				872748D322ED8E56005B7678 /* CollectionView+RegisterXib.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		87BB90E322ED81030078EFEB = {
 			isa = PBXGroup;
 			children = (
-				87BB90EE22ED81040078EFEB /* QuickStats */,
 				87BB90ED22ED81040078EFEB /* Products */,
+				87BB90EE22ED81040078EFEB /* QuickStats */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +121,15 @@
 		87BB90EE22ED81040078EFEB /* QuickStats */ = {
 			isa = PBXGroup;
 			children = (
+				872748D122ED8D62005B7678 /* Cells */,
+				872748D222ED8E41005B7678 /* Extensions */,
+				872748C022ED8386005B7678 /* Helpers */,
+				872748CC22ED8BC4005B7678 /* Models */,
+				872748BD22ED8177005B7678 /* ViewControllers */,
 				87BB90EF22ED81040078EFEB /* AppDelegate.swift */,
-				87BB90F122ED81040078EFEB /* ViewController.swift */,
-				87BB90F322ED81040078EFEB /* Main.storyboard */,
 				87BB90F622ED81060078EFEB /* Assets.xcassets */,
-				87BB90F822ED81060078EFEB /* LaunchScreen.storyboard */,
 				87BB90FB22ED81060078EFEB /* Info.plist */,
+				87BB90F822ED81060078EFEB /* LaunchScreen.storyboard */,
 			);
 			path = QuickStats;
 			sourceTree = "<group>";
@@ -122,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				872748D022ED8D5B005B7678 /* WidgetCollectionViewCell.xib in Resources */,
 				87BB90FA22ED81060078EFEB /* LaunchScreen.storyboard in Resources */,
 				87BB90F722ED81060078EFEB /* Assets.xcassets in Resources */,
 				87BB90F522ED81040078EFEB /* Main.storyboard in Resources */,
@@ -135,8 +206,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87BB90F222ED81040078EFEB /* ViewController.swift in Sources */,
+				872748BF22ED81E8005B7678 /* LoginViewController.swift in Sources */,
+				87BB90F222ED81040078EFEB /* SubscriptionViewController.swift in Sources */,
+				872748C522ED8551005B7678 /* Storyboarded.swift in Sources */,
+				872748CB22ED8BB8005B7678 /* Extensions.swift in Sources */,
+				872748D422ED8E56005B7678 /* CollectionView+RegisterXib.swift in Sources */,
+				872748D622ED93D1005B7678 /* WidgetListViewController.swift in Sources */,
+				872748C222ED839D005B7678 /* Settings.swift in Sources */,
+				872748C722ED89A6005B7678 /* API.swift in Sources */,
 				87BB90F022ED81040078EFEB /* AppDelegate.swift in Sources */,
+				872748C922ED8B69005B7678 /* Widget.swift in Sources */,
+				872748CF22ED8D5B005B7678 /* WidgetCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +229,7 @@
 				87BB90F422ED81040078EFEB /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		87BB90F822ED81060078EFEB /* LaunchScreen.storyboard */ = {
@@ -157,6 +238,7 @@
 				87BB90F922ED81060078EFEB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -285,6 +367,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QX3B8ZS54S;
 				INFOPLIST_FILE = QuickStats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +386,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QX3B8ZS54S;
 				INFOPLIST_FILE = QuickStats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
