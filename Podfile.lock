@@ -1,18 +1,22 @@
 PODS:
+  - KeychainAccess (3.2.0)
   - SDWebImage (4.4.7):
     - SDWebImage/Core (= 4.4.7)
   - SDWebImage/Core (4.4.7)
 
 DEPENDENCIES:
+  - KeychainAccess
   - SDWebImage (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - KeychainAccess
     - SDWebImage
 
 SPEC CHECKSUMS:
+  KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
   SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
 
-PODFILE CHECKSUM: 0d64124116b0a22e67618a06192342d746e42a04
+PODFILE CHECKSUM: 75d6b2727804d22a4434f71322b2266b4c3b01d1
 
 COCOAPODS: 1.7.5

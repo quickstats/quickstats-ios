@@ -26,6 +26,7 @@
 		87D0853822EDA7B900D6A881 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D0853722EDA7B900D6A881 /* SampleViewController.swift */; };
 		87D0853A22EDA9A500D6A881 /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D0853922EDA9A500D6A881 /* Samples.swift */; };
 		BFA6FFC460D21D1CBF7258A2 /* Pods_QuickStats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD23A73B7C935D2B3D583EE8 /* Pods_QuickStats.framework */; };
+		C1D990B422EFF2FB00FEEE5A /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D990B322EFF2FB00FEEE5A /* OSLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		87D0853522ED9C8000D6A881 /* WidgetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDetailViewController.swift; sourceTree = "<group>"; };
 		87D0853722EDA7B900D6A881 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		87D0853922EDA9A500D6A881 /* Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
+		C1D990B322EFF2FB00FEEE5A /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
 		FD23A73B7C935D2B3D583EE8 /* Pods_QuickStats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickStats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				872748D322ED8E56005B7678 /* CollectionView+RegisterXib.swift */,
+				C1D990B322EFF2FB00FEEE5A /* OSLog.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				87BB90F022ED81040078EFEB /* AppDelegate.swift in Sources */,
 				872748C922ED8B69005B7678 /* Widget.swift in Sources */,
 				872748CF22ED8D5B005B7678 /* WidgetCollectionViewCell.swift in Sources */,
+				C1D990B422EFF2FB00FEEE5A /* OSLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

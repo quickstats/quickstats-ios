@@ -7,4 +7,5 @@ target 'QuickStats' do
 
   # Pods for QuickStats
   pod 'SDWebImage', '~> 4.0'
+  pod 'KeychainAccess'
 end

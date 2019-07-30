@@ -12,6 +12,7 @@ import os.log
 class SubscriptionViewController: UICollectionViewController {
     private var subscriptions: [Widget]?
     private var refreshControl: UIRefreshControl!
+    private let logger = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: "SubscriptionViewController")
 
     @objc func loadData() {
         Widget.subscriptions { (widgets) in
@@ -31,8 +32,6 @@ class SubscriptionViewController: UICollectionViewController {
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(loadData), for: UIControl.Event.valueChanged)
         collectionView!.addSubview(refreshControl)
-
-        loadData()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -45,7 +44,8 @@ class SubscriptionViewController: UICollectionViewController {
             present(nav, animated: true, completion: nil)
             return
         }
-        os_log(.debug, "Logged in as ", username)
+        os_log("Logged in as %s", log: logger, type: .debug, username)
+        loadData()
     }
 }
 
@@ -64,7 +64,8 @@ extension SubscriptionViewController: UICollectionViewDelegateFlowLayout {
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // 10 Gives us our border around the edges
-        let width = (UIScreen.main.bounds.width - 10) / 3
+        let width = (UIScreen.main.bounds.width - 20) / 3
+        os_log("Collection size: %f.2", log: logger, type: .debug, width)
 
         if width > 128 {
             return CGSize(width: 128, height: 128)

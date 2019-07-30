@@ -32,6 +32,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" textContentType="username"/>
+                                                    <connections>
+                                                        <action selector="textChanged:" destination="edY-Eb-zwb" eventType="editingDidEnd" id="MEL-u5-SUO"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -54,6 +57,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                    <connections>
+                                                        <action selector="textChanged:" destination="edY-Eb-zwb" eventType="editingDidEnd" id="btv-zb-Kme"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -71,19 +77,44 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPb-qT-u5Q">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tsundere.co" borderStyle="roundedRect" placeholder="Server" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="umq-wA-0ZE">
+                                                    <rect key="frame" x="8" y="8" width="398" height="27.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL"/>
+                                                    <connections>
+                                                        <action selector="textChanged:" destination="edY-Eb-zwb" eventType="editingDidEnd" id="vdX-xf-9yA"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="umq-wA-0ZE" secondAttribute="bottom" constant="8" id="kSZ-8p-Tzi"/>
+                                                <constraint firstAttribute="trailing" secondItem="umq-wA-0ZE" secondAttribute="trailing" constant="8" id="kyw-yX-tZg"/>
+                                                <constraint firstItem="umq-wA-0ZE" firstAttribute="top" secondItem="QSD-Ck-GAP" secondAttribute="top" constant="8" id="y8z-0D-Nmg"/>
+                                                <constraint firstItem="umq-wA-0ZE" firstAttribute="leading" secondItem="QSD-Ck-GAP" secondAttribute="leading" constant="8" id="zHZ-xL-HDS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oqd-PA-cJb">
+                                        <rect key="frame" x="0.0" y="167" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oqd-PA-cJb" id="hgP-7I-Mfo">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgN-0r-jPs">
                                                     <rect key="frame" x="8" y="8" width="398" height="27.5"/>
                                                     <state key="normal" title="Login"/>
                                                     <connections>
-                                                        <action selector="login:" destination="edY-Eb-zwb" eventType="primaryActionTriggered" id="74n-k6-Ohi"/>
+                                                        <action selector="login:" destination="edY-Eb-zwb" eventType="primaryActionTriggered" id="FhI-jr-Z8f"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="LPb-qT-u5Q" secondAttribute="bottom" constant="8" id="35V-AJ-n0L"/>
-                                                <constraint firstAttribute="trailing" secondItem="LPb-qT-u5Q" secondAttribute="trailing" constant="8" id="Z3s-Fj-35b"/>
-                                                <constraint firstItem="LPb-qT-u5Q" firstAttribute="leading" secondItem="QSD-Ck-GAP" secondAttribute="leading" constant="8" id="tVh-rn-hnK"/>
-                                                <constraint firstItem="LPb-qT-u5Q" firstAttribute="top" secondItem="QSD-Ck-GAP" secondAttribute="top" constant="8" id="wOw-U7-9Ii"/>
+                                                <constraint firstItem="UgN-0r-jPs" firstAttribute="top" secondItem="hgP-7I-Mfo" secondAttribute="top" constant="8" id="1wa-5A-svn"/>
+                                                <constraint firstAttribute="trailing" secondItem="UgN-0r-jPs" secondAttribute="trailing" constant="8" id="8Cf-yQ-grY"/>
+                                                <constraint firstAttribute="bottom" secondItem="UgN-0r-jPs" secondAttribute="bottom" constant="8" id="ehf-gO-EeJ"/>
+                                                <constraint firstItem="UgN-0r-jPs" firstAttribute="leading" secondItem="hgP-7I-Mfo" secondAttribute="leading" constant="8" id="oRP-pm-cen"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -96,7 +127,9 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="loginButton" destination="UgN-0r-jPs" id="Ysv-5V-QqW"/>
                         <outlet property="password" destination="eHs-Og-4CS" id="cmc-1t-oAh"/>
+                        <outlet property="serverField" destination="umq-wA-0ZE" id="TIs-dG-2tq"/>
                         <outlet property="username" destination="eal-xd-62x" id="pzl-ug-Zyr"/>
                     </connections>
                 </tableViewController>

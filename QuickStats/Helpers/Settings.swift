@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import KeychainAccess
 
 extension UserDefaults {
     func string(forKey key: Settings.SettingsKeys) -> String? {
@@ -17,12 +18,23 @@ extension UserDefaults {
     }
 }
 
+extension Keychain {
+    func string(forKey key: Settings.SettingsKeys) -> String? {
+        return try? getString(key.rawValue)
+    }
+    
+    func set(_ newValue: String, forKey key: Settings.SettingsKeys) {
+        try? set(newValue, key: key.rawValue)
+    }
+}
+
 class Settings {
     enum SettingsKeys: String {
         case suite = "net.kungfudiscomonkey.quickstats"
-        case username = "username"
-        case password = "password"
+        case username
+        case server
     }
 
     static var shared = UserDefaults.init(suiteName: SettingsKeys.suite.rawValue)!
+    static var keychain = Keychain(service: SettingsKeys.suite.rawValue)
 }

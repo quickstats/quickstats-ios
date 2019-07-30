@@ -53,7 +53,7 @@ struct WidgetResponse: Codable {
 extension Widget {
     func create(completionHandler: @escaping (Widget) -> Void) {
         guard let username = Settings.shared.string(forKey: .username) else { return }
-        guard let password = Settings.shared.string(forKey: .password) else { return }
+        guard let password = Settings.keychain.string(forKey: .server) else { return    }
         let body = self.encode()
 
         authedRequest(path: "/api/widget", method: "POST", body: body, username: username, password: password) { _, data in

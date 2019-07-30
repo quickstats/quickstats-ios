@@ -12,6 +12,7 @@ import os.log
 class WidgetListViewController: UICollectionViewController {
     private var subscriptions: [Widget]?
     private var refreshControl: UIRefreshControl!
+    private let logger = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: "WidgetListViewController")
 
     @objc func loadData() {
         Widget.list { (widgets) in
@@ -46,13 +47,13 @@ extension WidgetListViewController: UICollectionViewDelegateFlowLayout {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withIdentifier: WidgetCollectionViewCell.self, for: indexPath)
         cell.widget = subscriptions?[indexPath.row]
-//        cell.sizeToFit()
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // 10 Gives us our border around the edges
-        let width = (UIScreen.main.bounds.width - 10) / 3
-
+        let width = (UIScreen.main.bounds.width - 20) / 3
+        os_log("Collection size: %f.2", log: logger, type: .debug, width)
+        
         if width > 128 {
             return CGSize(width: 128, height: 128)
         }
