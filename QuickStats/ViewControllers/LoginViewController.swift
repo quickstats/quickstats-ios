@@ -15,13 +15,13 @@ class LoginViewController: UITableViewController, Storyboarded {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var serverField: UITextField!
-    
+
     @IBOutlet weak var loginButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     @IBAction func textChanged(_ sender: UITextField) {
         loginButton.isEnabled = [
             username.text,
@@ -29,7 +29,7 @@ class LoginViewController: UITableViewController, Storyboarded {
             serverField.text
             ].allSatisfy { $0 != "" }
     }
-    
+
     @IBAction func login(_ sender: UIButton) {
         checkLogin(username: username.text!, password: password.text!) { (_) in
             os_log("Successfully logged in as %s", log: self.logger, type: .default, self.username.text!)

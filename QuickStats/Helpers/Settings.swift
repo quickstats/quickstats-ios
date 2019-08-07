@@ -22,7 +22,7 @@ extension Keychain {
     func string(forKey key: Settings.SettingsKeys) -> String? {
         return try? getString(key.rawValue)
     }
-    
+
     func set(_ newValue: String, forKey key: Settings.SettingsKeys) {
         try? set(newValue, key: key.rawValue)
     }

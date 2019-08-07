@@ -53,7 +53,7 @@ extension WidgetListViewController: UICollectionViewDelegateFlowLayout {
         // 10 Gives us our border around the edges
         let width = (UIScreen.main.bounds.width - 20) / 3
         os_log("Collection size: %f.2", log: logger, type: .debug, width)
-        
+
         if width > 128 {
             return CGSize(width: 128, height: 128)
         }

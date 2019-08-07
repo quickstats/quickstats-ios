@@ -14,13 +14,13 @@ func authedRequest(path: String, method: String, queryItems: [URLQueryItem], com
     guard let user = Settings.shared.string(forKey: .username) else { return }
     guard let pass = Settings.keychain.string(forKey: .server) else { return }
     guard let host = Settings.shared.string(forKey: .server) else { return }
-    
+
     var components = URLComponents()
     components.scheme = "https"
     components.host = host
     components.path = path
     components.queryItems = queryItems
-    
+
     authedRequest(url: components.url!, method: method, body: nil, username: user, password: pass, completionHandler: completionHandler)
 }
 

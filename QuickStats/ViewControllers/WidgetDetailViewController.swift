@@ -23,16 +23,16 @@ enum WidgetDetailRows: Int {
     case notes
 }
 
-fileprivate struct SectionGroup {
-    let title : String
-    let list : [WidgetDetailRows]
+private struct SectionGroup {
+    let title: String
+    let list: [WidgetDetailRows]
 }
 
 class WidgetDetailViewController: UITableViewController, Storyboarded {
 
     fileprivate var sections = [
-        SectionGroup(title: "Basic", list: [.title,.description, .timestamp, .value]),
-        SectionGroup(title: "Actions", list: [.samples,.waypoints, .notes])
+        SectionGroup(title: "Basic", list: [.title, .description, .timestamp, .value]),
+        SectionGroup(title: "Actions", list: [.samples, .waypoints, .notes])
     ]
 
     var widget: Widget! {
