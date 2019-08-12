@@ -9,30 +9,15 @@
 import UIKit
 import os.log
 
-enum WidgetDetailRows: Int {
-    // Properties
-    case title = 0
-    case description
-    case value
-    case more
-    case type
-    case timestamp
-    // Actions
-    case samples
-    case waypoints
-    case notes
-}
-
 private struct SectionGroup {
     let title: String
-    let list: [WidgetDetailRows]
+    let count: Int
 }
 
 class WidgetDetailViewController: UITableViewController, Storyboarded {
-
-    fileprivate var sections = [
-        SectionGroup(title: "Basic", list: [.title, .description, .timestamp, .value]),
-        SectionGroup(title: "Actions", list: [.samples, .waypoints, .notes])
+    fileprivate var tableSections = [
+        SectionGroup(title: "Basic", count: 5),
+        SectionGroup(title: "Actions", count: 1)
     ]
 
     var widget: Widget! {
@@ -50,62 +35,63 @@ class WidgetDetailViewController: UITableViewController, Storyboarded {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        return tableSections.count
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].list.count
+        return tableSections[section].count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let section = sections[indexPath.section].list[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        switch section {
-        case .title:
+        switch indexPath {
+        case [0, 0]:
             cell.accessoryType = .none
             cell.textLabel?.text = "Title"
             cell.detailTextLabel?.text = widget.title
-        case .value:
+        case [0, 1]:
             cell.accessoryType = .none
-            cell.textLabel?.text = "Value"
-            cell.detailTextLabel?.text = "\(widget.value)"
-        case .timestamp:
+            cell.textLabel?.text = "Type"
+            cell.detailTextLabel?.text = widget.type.rawValue
+        case [0, 2]:
+            cell.accessoryType = .none
+            cell.textLabel?.text = "Description"
+            cell.detailTextLabel?.text = widget.description
+        case [0, 3]:
             cell.accessoryType = .none
             cell.textLabel?.text = "Timestamp"
             let formatter = DateFormatter()
             formatter.dateStyle = .full
             formatter.timeStyle = .full
             cell.detailTextLabel?.text = formatter.string(from: widget.timestamp)
-        case .description:
+        case [0, 4]:
             cell.accessoryType = .none
-            cell.textLabel?.text = "Description"
-            cell.detailTextLabel?.text = widget.description
-        case .samples:
+            cell.textLabel?.text = "Value"
+            cell.detailTextLabel?.text = "\(widget.value)"
+        case [1, 0]:
             cell.accessoryType = .disclosureIndicator
             cell.textLabel?.text = "Samples"
             cell.detailTextLabel?.text = ""
         default:
-            cell.accessoryType = .none
-            cell.textLabel?.text = "Unknown"
+            fatalError("Unknown section for \(indexPath)")
         }
 
         return cell
     }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section].title
+        return tableSections[section].title
     }
-    override func tableView(_ tableView: UITableView, canFocusRowAt indexPath: IndexPath) -> Bool {
-        let section = sections[indexPath.section].list[indexPath.row]
-        switch section {
-        case .samples:
+
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        switch indexPath {
+        case [1, 0]:
             return true
         default:
             return false
         }
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let section = sections[indexPath.section].list[indexPath.row]
-        switch section {
-        case .samples:
+        switch indexPath {
+        case [1, 0]:
             let view = SampleViewController.instantiate()
             view.widget = widget
             navigationController?.pushViewController(view, animated: true)
