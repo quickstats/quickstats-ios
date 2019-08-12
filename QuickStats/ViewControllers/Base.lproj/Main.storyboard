@@ -137,7 +137,7 @@
             </objects>
             <point key="canvasLocation" x="35" y="-688"/>
         </scene>
-        <!--Subscriptions-->
+        <!--Subscription View Controller-->
         <scene sceneID="8Ev-4w-fk9">
             <objects>
                 <collectionViewController id="wUV-Nw-wda" customClass="SubscriptionViewController" customModule="QuickStats" customModuleProvider="target" sceneMemberID="viewController">
@@ -166,14 +166,22 @@
                             <outlet property="delegate" destination="wUV-Nw-wda" id="vE2-it-Igu"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Subscriptions" image="Subscribe" id="fzC-N6-w0k"/>
-                    <navigationItem key="navigationItem" id="YFc-Jg-auJ"/>
+                    <navigationItem key="navigationItem" id="YFc-Jg-auJ">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="EAg-wZ-4wm"/>
+                            <barButtonItem systemItem="organize" id="VuO-QH-eu9">
+                                <connections>
+                                    <action selector="clickOrganize:" destination="wUV-Nw-wda" id="bBt-Ub-T4i"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="koz-jY-59M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819" y="-9"/>
+            <point key="canvasLocation" x="2728.985507246377" y="-9.375"/>
         </scene>
-        <!--Widgets-->
+        <!--Widget List View Controller-->
         <scene sceneID="QYi-gd-zwq">
             <objects>
                 <collectionViewController id="Toc-VB-gt0" customClass="WidgetListViewController" customModule="QuickStats" customModuleProvider="target" sceneMemberID="viewController">
@@ -202,11 +210,16 @@
                             <outlet property="delegate" destination="Toc-VB-gt0" id="Ns3-Mt-iPh"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Widgets" id="q7T-xE-ZSn"/>
+                    <navigationItem key="navigationItem" id="ZKf-XO-Vt4">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" systemItem="add" id="cqs-ME-Hbi"/>
+                            <barButtonItem systemItem="organize" id="v65-Gg-zZs"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckZ-nz-yxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2645" y="-9"/>
+            <point key="canvasLocation" x="2729" y="-688"/>
         </scene>
         <!--Settings-->
         <scene sceneID="N2I-tB-HyP">
@@ -235,7 +248,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIQ-lk-9oJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3452" y="-9"/>
+            <point key="canvasLocation" x="2729" y="-1383"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aDA-te-5CL">
@@ -248,8 +261,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="wUV-Nw-wda" kind="relationship" relationship="viewControllers" id="Q8s-OJ-bvr"/>
-                        <segue destination="Toc-VB-gt0" kind="relationship" relationship="viewControllers" id="JhW-mx-YBj"/>
+                        <segue destination="40S-Sn-KPL" kind="relationship" relationship="viewControllers" id="Q8s-OJ-bvr"/>
+                        <segue destination="0xe-oZ-wI0" kind="relationship" relationship="viewControllers" id="JhW-mx-YBj"/>
                         <segue destination="RHB-X2-kBH" kind="relationship" relationship="viewControllers" id="S7O-o5-wzO"/>
                     </connections>
                 </tabBarController>
@@ -344,11 +357,49 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnk-NS-v3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2645" y="688"/>
+            <point key="canvasLocation" x="2729" y="688"/>
+        </scene>
+        <!--Subscriptions-->
+        <scene sceneID="67R-6K-Hnb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="40S-Sn-KPL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Subscriptions" image="Subscribe" id="fzC-N6-w0k"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WT2-rq-hqh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wUV-Nw-wda" kind="relationship" relationship="rootViewController" id="ehL-6D-GeY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SST-i8-vPr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1819" y="-9"/>
+        </scene>
+        <!--Widgets-->
+        <scene sceneID="feJ-0v-sCo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0xe-oZ-wI0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Widgets" id="q7T-xE-ZSn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jIQ-SO-Da1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Toc-VB-gt0" kind="relationship" relationship="rootViewController" id="ddv-Je-LD8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r2V-n5-yaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1819" y="-688"/>
         </scene>
     </scenes>
     <resources>
         <image name="Setting" width="32" height="32"/>
-        <image name="Subscribe" width="64" height="64"/>
+        <image name="Subscribe" width="32" height="32"/>
     </resources>
 </document>

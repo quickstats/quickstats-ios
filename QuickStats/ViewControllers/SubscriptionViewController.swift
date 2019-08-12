@@ -15,13 +15,36 @@ class SubscriptionViewController: UICollectionViewController {
     private let logger = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: "SubscriptionViewController")
 
     @objc func loadData() {
+        filterLoadData(filter: {_ in true})
+    }
+
+    func filterLoadData(filter: @escaping (Widget) -> Bool) {
         Widget.subscriptions { (widgets) in
-            self.subscriptions = widgets
+            self.subscriptions = widgets.filter(filter)
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
                 self.refreshControl.endRefreshing()
             }
         }
+    }
+
+    @IBAction func clickOrganize(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Organize", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "All", style: .default) { (_) in
+            self.filterLoadData {_ in true}
+        })
+        alert.addAction(UIAlertAction(title: "Filter Countdown", style: .default) { (_) in
+            self.filterLoadData { $0.type == .Countdown }
+        })
+        alert.addAction(UIAlertAction(title: "Filter Location", style: .default) { (_) in
+            self.filterLoadData { $0.type == .Location }
+        })
+        alert.addAction(UIAlertAction(title: "Filter Chart", style: .default) { (_) in
+            self.filterLoadData { $0.type == .Chart }
+        })
+        alert.popoverPresentationController?.barButtonItem = sender
+        alert.popoverPresentationController?.sourceView = collectionView
+        present(alert, animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
