@@ -53,7 +53,6 @@ func authedRequest(url: URL, method: String, body: Data?, username: String, pass
             completionHandler(httpResponse, data!)
         }
     })
-
     task.resume()
 }
 

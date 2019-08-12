@@ -213,7 +213,11 @@
                     <navigationItem key="navigationItem" id="ZKf-XO-Vt4">
                         <rightBarButtonItems>
                             <barButtonItem style="plain" systemItem="add" id="cqs-ME-Hbi"/>
-                            <barButtonItem systemItem="organize" id="v65-Gg-zZs"/>
+                            <barButtonItem systemItem="organize" id="v65-Gg-zZs">
+                                <connections>
+                                    <action selector="clickOrganize:" destination="Toc-VB-gt0" id="XYS-5B-0lv"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                 </collectionViewController>
