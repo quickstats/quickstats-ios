@@ -10,17 +10,13 @@ import UIKit
 import SDWebImage
 
 class WidgetCollectionViewCell: UICollectionViewCell {
-    var formatter: DateComponentsFormatter {
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.day, .hour, .minute, .second]
-        formatter.unitsStyle = .positional
-        formatter.zeroFormattingBehavior = .dropLeading
-        return formatter
-    }
+    let countdownFormat = Formats.Countdown
+    let numberFormat = Formats.Number
 
     var timer: Timer?
     var widget: Widget? {
         didSet {
+            timer?.invalidate()
             titleLabel.text = widget?.title
 
             switch widget!.type {
@@ -28,11 +24,7 @@ class WidgetCollectionViewCell: UICollectionViewCell {
                 timer = Timer.scheduledTimer(withTimeInterval: .init(1), repeats: true, block: updateCounter(timer:))
                 updateCounter(timer: timer!)
             default:
-                timer?.invalidate()
-                let formatter = NumberFormatter()
-                formatter.groupingSeparator = " "
-                formatter.numberStyle = .decimal
-                valueLabel.text = formatter.string(for: widget!.value)
+                valueLabel.text = numberFormat.string(for: widget!.value)
                 valueLabel.textColor = UIColor.black
             }
         }
@@ -46,11 +38,11 @@ class WidgetCollectionViewCell: UICollectionViewCell {
     func updateCounter(timer: Timer) {
         let duration = widget!.timestamp.timeIntervalSinceNow
         if duration > 0 {
-            valueLabel.text = formatter.string(from: duration)
-            valueLabel.textColor = UIColor.blue
+            valueLabel.text = countdownFormat.string(from: duration)
+            valueLabel.textColor = Colors.TimerPending
         } else {
-            valueLabel.text = formatter.string(from: duration * -1)
-            valueLabel.textColor = UIColor.red
+            valueLabel.text = countdownFormat.string(from: duration * -1)
+            valueLabel.textColor = Colors.TimerOverdue
         }
 
     }

@@ -20,7 +20,7 @@ class WidgetListViewController: UICollectionViewController {
 
     func filterLoadData(filter: @escaping (Widget) -> Bool) {
         Widget.list { (widgets) in
-            self.subscriptions = widgets.filter(filter)
+            self.subscriptions = widgets.filter(filter).sorted { $0.timestamp < $1.timestamp }
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
                 self.refreshControl.endRefreshing()
