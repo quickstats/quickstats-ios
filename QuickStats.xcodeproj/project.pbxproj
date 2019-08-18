@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3824D1601E66F097472923A6 /* Pods_Pinned.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6973147BDD34F285FD0DE6 /* Pods_Pinned.framework */; };
+		657E7C815C78D51D10FD8022 /* Pods_Pinned.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2891D8C777B7D01F2C68B0 /* Pods_Pinned.framework */; };
 		872748BF22ED81E8005B7678 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748BE22ED81E8005B7678 /* LoginViewController.swift */; };
 		872748C222ED839D005B7678 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748C122ED839D005B7678 /* Settings.swift */; };
 		872748C522ED8551005B7678 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748C422ED8551005B7678 /* Storyboarded.swift */; };
@@ -68,7 +68,6 @@
 /* Begin PBXFileReference section */
 		2BBF499F1E5776A7A715BE3F /* Pods-QuickStats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickStats.release.xcconfig"; path = "Target Support Files/Pods-QuickStats/Pods-QuickStats.release.xcconfig"; sourceTree = "<group>"; };
 		377E8A0B5E070290685FC8D8 /* Pods-QuickStats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickStats.debug.xcconfig"; path = "Target Support Files/Pods-QuickStats/Pods-QuickStats.debug.xcconfig"; sourceTree = "<group>"; };
-		3E4B4A30247A349AC3B9C4E4 /* Pods-Pinned.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinned.debug.xcconfig"; path = "Target Support Files/Pods-Pinned/Pods-Pinned.debug.xcconfig"; sourceTree = "<group>"; };
 		872748BE22ED81E8005B7678 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		872748C122ED839D005B7678 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		872748C422ED8551005B7678 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		872748CE22ED8D5B005B7678 /* WidgetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetCollectionViewCell.xib; sourceTree = "<group>"; };
 		872748D322ED8E56005B7678 /* CollectionView+RegisterXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+RegisterXib.swift"; sourceTree = "<group>"; };
 		872748D522ED93D1005B7678 /* WidgetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetListViewController.swift; sourceTree = "<group>"; };
+		8794C7539E0B896C63A12AA9 /* Pods-Pinned.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinned.debug.xcconfig"; path = "Target Support Files/Pods-Pinned/Pods-Pinned.debug.xcconfig"; sourceTree = "<group>"; };
 		87BB90EC22ED81040078EFEB /* QuickStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB90EF22ED81040078EFEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87BB90F122ED81040078EFEB /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
@@ -98,9 +98,9 @@
 		87F3CF692308FCD8001316AD /* Pinned.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pinned.entitlements; sourceTree = "<group>"; };
 		87F3CF6A2308FCF0001316AD /* QuickStats.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickStats.entitlements; sourceTree = "<group>"; };
 		87F3CF7223091089001316AD /* WidgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTableViewCell.swift; sourceTree = "<group>"; };
-		B966CA4E97E26F1FF75EDEE8 /* Pods-Pinned.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinned.release.xcconfig"; path = "Target Support Files/Pods-Pinned/Pods-Pinned.release.xcconfig"; sourceTree = "<group>"; };
+		A23F14AE82853F94B956A864 /* Pods-Pinned.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinned.release.xcconfig"; path = "Target Support Files/Pods-Pinned/Pods-Pinned.release.xcconfig"; sourceTree = "<group>"; };
 		C1D990B322EFF2FB00FEEE5A /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
-		CE6973147BDD34F285FD0DE6 /* Pods_Pinned.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pinned.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE2891D8C777B7D01F2C68B0 /* Pods_Pinned.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pinned.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD23A73B7C935D2B3D583EE8 /* Pods_QuickStats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickStats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,7 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87F3CF5A2308FCAB001316AD /* NotificationCenter.framework in Frameworks */,
-				3824D1601E66F097472923A6 /* Pods_Pinned.framework in Frameworks */,
+				657E7C815C78D51D10FD8022 /* Pods_Pinned.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,8 +231,8 @@
 			children = (
 				377E8A0B5E070290685FC8D8 /* Pods-QuickStats.debug.xcconfig */,
 				2BBF499F1E5776A7A715BE3F /* Pods-QuickStats.release.xcconfig */,
-				3E4B4A30247A349AC3B9C4E4 /* Pods-Pinned.debug.xcconfig */,
-				B966CA4E97E26F1FF75EDEE8 /* Pods-Pinned.release.xcconfig */,
+				8794C7539E0B896C63A12AA9 /* Pods-Pinned.debug.xcconfig */,
+				A23F14AE82853F94B956A864 /* Pods-Pinned.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 			children = (
 				FD23A73B7C935D2B3D583EE8 /* Pods_QuickStats.framework */,
 				87F3CF592308FCAB001316AD /* NotificationCenter.framework */,
-				CE6973147BDD34F285FD0DE6 /* Pods_Pinned.framework */,
+				DE2891D8C777B7D01F2C68B0 /* Pods_Pinned.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -275,7 +275,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87F3CF672308FCAB001316AD /* Build configuration list for PBXNativeTarget "Pinned" */;
 			buildPhases = (
-				2FA7306BDE2519D15BA423E8 /* [CP] Check Pods Manifest.lock */,
+				4B0246916AD8E99E60AF5FCF /* [CP] Check Pods Manifest.lock */,
 				87F3CF542308FCAA001316AD /* Sources */,
 				87F3CF552308FCAA001316AD /* Frameworks */,
 				87F3CF562308FCAA001316AD /* Resources */,
@@ -365,7 +365,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2FA7306BDE2519D15BA423E8 /* [CP] Check Pods Manifest.lock */ = {
+		4B0246916AD8E99E60AF5FCF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -673,7 +673,7 @@
 		};
 		87F3CF652308FCAB001316AD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E4B4A30247A349AC3B9C4E4 /* Pods-Pinned.debug.xcconfig */;
+			baseConfigurationReference = 8794C7539E0B896C63A12AA9 /* Pods-Pinned.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Pinned/Pinned.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -694,7 +694,7 @@
 		};
 		87F3CF662308FCAB001316AD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B966CA4E97E26F1FF75EDEE8 /* Pods-Pinned.release.xcconfig */;
+			baseConfigurationReference = A23F14AE82853F94B956A864 /* Pods-Pinned.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Pinned/Pinned.entitlements;
 				CODE_SIGN_STYLE = Automatic;
