@@ -10,19 +10,20 @@ import UIKit
 import NotificationCenter
 
 class PinnedViewController: UITableViewController, NCWidgetProviding {
-    var pinnedItems = Settings.shared.array(forKey: .pinnedIDs) ?? []
     var widgets: [Widget]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.register(WidgetTableViewCell.self, forCellReuseIdentifier: "Cell")
+        widgets = Settings.shared.cached(forKey: .cachedPinns)
     }
 
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+        let pinned = Settings.shared.array(forKey: .pinnedIDs) ?? []
         Widget.subscriptions { (subscriptions) in
-            let filtered = subscriptions.filter { self.pinnedItems.contains($0.id) }
+            let filtered = subscriptions.filter { pinned.contains($0.id) }
             self.widgets = filtered.sorted { $0.timestamp < $1.timestamp }
+            Settings.shared.set(self.widgets, forKey: .cachedPinns)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

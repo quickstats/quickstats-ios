@@ -20,6 +20,7 @@ class WidgetTableViewCell: UITableViewCell {
 
             if widget.type == .Countdown {
                 timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: updateCountdown)
+                updateCountdown(timer: timer!)
             } else {
                 detailTextLabel?.text = numberFormat.string(for: widget.value)
                 detailTextLabel?.textColor = UIColor.black

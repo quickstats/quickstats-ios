@@ -23,7 +23,7 @@ class WidgetDetailViewController: UITableViewController, Storyboarded {
     var timer: Timer?
     var countdown: UITableViewCell?
     var countdownFormat = Formats.Countdown
-    var pinnedItems = Settings.shared.array(forKey: .pinnedIDs) ?? []
+    var pinnedItems: [String]!
 
     var widget: Widget! {
         didSet {
@@ -39,6 +39,7 @@ class WidgetDetailViewController: UITableViewController, Storyboarded {
 
     override func viewDidLoad() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(clickDone))
+        pinnedItems = Settings.shared.array(forKey: .pinnedIDs) ?? []
     }
 
     @objc func clickDone() {

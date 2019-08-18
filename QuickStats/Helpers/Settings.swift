@@ -21,6 +21,16 @@ extension UserDefaults {
         removeObject(forKey: key.rawValue)
     }
 
+    func cached<T: Decodable>(forKey key: Settings.SettingsKeys) -> T? {
+        guard let data = value(forKey: key.rawValue) as? Data else { return nil}
+        return try? PropertyListDecoder().decode(T.self, from: data)
+    }
+
+    func set<T: Encodable>(_ newValue: T, forKey key: Settings.SettingsKeys) {
+        let data = try? PropertyListEncoder().encode(newValue)
+        set(data, forKey: key.rawValue)
+    }
+
     func set(_ newValue: String, forKey key: Settings.SettingsKeys) {
         set(newValue, forKey: key.rawValue)
     }
@@ -46,6 +56,7 @@ class Settings {
         case username
         case server
         case pinnedIDs
+        case cachedPinns
     }
 
     static var shared = UserDefaults.init(suiteName: SettingsKeys.suite.rawValue)!

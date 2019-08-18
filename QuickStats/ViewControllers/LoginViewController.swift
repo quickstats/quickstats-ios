@@ -32,9 +32,8 @@ class LoginViewController: UITableViewController, Storyboarded {
 
     @IBAction func login(_ sender: UIButton) {
         checkLogin(username: username.text!, password: password.text!) { (_) in
-            os_log("Successfully logged in as %s", log: self.logger, type: .default, self.username.text!)
-
             DispatchQueue.main.async {
+                os_log("Successfully logged in as %s", log: self.logger, type: .default, self.username.text!)
                 Settings.shared.set(self.username.text!, forKey: .username)
                 Settings.shared.set(self.serverField.text!, forKey: .server)
                 Settings.keychain.set(self.password.text!, forKey: .server)
