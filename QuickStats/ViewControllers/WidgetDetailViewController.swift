@@ -23,7 +23,7 @@ class WidgetDetailViewController: UITableViewController, Storyboarded {
     var timer: Timer?
     var countdown: UITableViewCell?
     var countdownFormat = Formats.Countdown
-    var pinnedItems = Settings.shared.array(forKey: .pinnedItems) ?? []
+    var pinnedItems = Settings.shared.array(forKey: .pinnedIDs) ?? []
 
     var widget: Widget! {
         didSet {
@@ -129,7 +129,7 @@ class WidgetDetailViewController: UITableViewController, Storyboarded {
             } else {
                 pinnedItems.append(widget.id)
             }
-            Settings.shared.set(pinnedItems, forKey: .pinnedItems)
+            Settings.shared.set(pinnedItems, forKey: .pinnedIDs)
             tableView.reloadData()
         default:
             print("unknown section")

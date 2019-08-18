@@ -11,9 +11,9 @@ import Foundation
 typealias AuthedRequestResponse = ((HTTPURLResponse, Data) -> Void)
 
 func authedRequest(path: String, method: String, queryItems: [URLQueryItem], completionHandler: @escaping AuthedRequestResponse) {
+    guard let host = Settings.shared.string(forKey: .server) else { return }
     guard let user = Settings.shared.string(forKey: .username) else { return }
     guard let pass = Settings.keychain.string(forKey: .server) else { return }
-    guard let host = Settings.shared.string(forKey: .server) else { return }
 
     var components = URLComponents()
     components.scheme = "https"

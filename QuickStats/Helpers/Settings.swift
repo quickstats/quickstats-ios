@@ -17,6 +17,10 @@ extension UserDefaults {
         return stringArray(forKey: key.rawValue)
     }
 
+    func removeObject(forKey key: Settings.SettingsKeys) {
+        removeObject(forKey: key.rawValue)
+    }
+
     func set(_ newValue: String, forKey key: Settings.SettingsKeys) {
         set(newValue, forKey: key.rawValue)
     }
@@ -38,12 +42,13 @@ extension Keychain {
 
 class Settings {
     enum SettingsKeys: String {
-        case suite = "net.kungfudiscomonkey.quickstats"
+        case suite = "group.net.kungfudiscomonkey.quickstats"
         case username
         case server
-        case pinnedItems
+        case pinnedIDs
     }
 
     static var shared = UserDefaults.init(suiteName: SettingsKeys.suite.rawValue)!
-    static var keychain = Keychain(service: SettingsKeys.suite.rawValue)
+    static var keychain = Keychain(service: SettingsKeys.suite.rawValue, accessGroup: SettingsKeys.suite.rawValue)
+
 }

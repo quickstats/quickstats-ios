@@ -9,3 +9,11 @@ target 'QuickStats' do
   pod 'SDWebImage', '~> 4.0'
   pod 'KeychainAccess'
 end
+
+target 'Pinned' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for QuickStats
+  pod 'KeychainAccess'
+end
