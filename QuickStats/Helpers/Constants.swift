@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class Colors {
     static let TimerOverdue = UIColor.red
     static let TimerPending = UIColor.blue

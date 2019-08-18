@@ -20,9 +20,19 @@ class WidgetDetailViewController: UITableViewController, Storyboarded {
         SectionGroup(title: "Actions", count: 1)
     ]
 
+    var timer: Timer?
+    var countdown: UITableViewCell?
+    var countdownFormat = Formats.Countdown
+
     var widget: Widget! {
         didSet {
             title = widget?.title
+
+            if widget.type == .Countdown {
+                timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: updateCountdown(timer:))
+            } else {
+                timer?.invalidate()
+            }
         }
     }
 
@@ -34,6 +44,17 @@ class WidgetDetailViewController: UITableViewController, Storyboarded {
         dismiss(animated: true, completion: nil)
     }
 
+    func updateCountdown(timer: Timer) {
+        let duration = widget!.timestamp.timeIntervalSinceNow
+        if duration > 0 {
+            countdown?.detailTextLabel?.text = countdownFormat.string(from: duration)
+            countdown?.detailTextLabel?.textColor = Colors.TimerPending
+        } else {
+            countdown?.detailTextLabel?.text = countdownFormat.string(from: duration * -1)
+            countdown?.detailTextLabel?.textColor = Colors.TimerOverdue
+        }
+    }
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return tableSections.count
     }
@@ -42,6 +63,7 @@ class WidgetDetailViewController: UITableViewController, Storyboarded {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.detailTextLabel?.textColor = UIColor.black
 
         switch indexPath {
         case [0, 0]:
@@ -66,6 +88,7 @@ class WidgetDetailViewController: UITableViewController, Storyboarded {
         case [0, 4]:
             cell.accessoryType = .none
             cell.textLabel?.text = "Value"
+            countdown = widget.type == .Countdown ? cell : nil
             cell.detailTextLabel?.text = "\(widget.value)"
         case [1, 0]:
             cell.accessoryType = .disclosureIndicator

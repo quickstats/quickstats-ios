@@ -87,10 +87,10 @@
 			isa = PBXGroup;
 			children = (
 				872748C622ED89A6005B7678 /* API.swift */,
+				87F3CF522308F1DC001316AD /* Constants.swift */,
 				872748CA22ED8BB8005B7678 /* Extensions.swift */,
 				872748C122ED839D005B7678 /* Settings.swift */,
 				872748C422ED8551005B7678 /* Storyboarded.swift */,
-				87F3CF522308F1DC001316AD /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
