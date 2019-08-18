@@ -13,7 +13,15 @@ extension UserDefaults {
     func string(forKey key: Settings.SettingsKeys) -> String? {
         return string(forKey: key.rawValue)
     }
+    func array(forKey key: Settings.SettingsKeys) -> [String]? {
+        return stringArray(forKey: key.rawValue)
+    }
+
     func set(_ newValue: String, forKey key: Settings.SettingsKeys) {
+        set(newValue, forKey: key.rawValue)
+    }
+
+    func set(_ newValue: [String]?, forKey key: Settings.SettingsKeys) {
         set(newValue, forKey: key.rawValue)
     }
 }
@@ -33,6 +41,7 @@ class Settings {
         case suite = "net.kungfudiscomonkey.quickstats"
         case username
         case server
+        case pinnedItems
     }
 
     static var shared = UserDefaults.init(suiteName: SettingsKeys.suite.rawValue)!
