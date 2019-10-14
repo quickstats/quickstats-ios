@@ -25,9 +25,11 @@
 		87D0853622ED9C8000D6A881 /* WidgetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D0853522ED9C8000D6A881 /* WidgetDetailViewController.swift */; };
 		87D0853822EDA7B900D6A881 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D0853722EDA7B900D6A881 /* SampleViewController.swift */; };
 		87D0853A22EDA9A500D6A881 /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D0853922EDA9A500D6A881 /* Samples.swift */; };
-		87D2BBBC235423F20029A9BE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 87D2BBBB235423F20029A9BE /* SDWebImage */; };
-		87D2BBBF2354240A0029A9BE /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 87D2BBBE2354240A0029A9BE /* KeychainAccess */; };
-		87D2BBC1235424140029A9BE /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 87D2BBC0235424140029A9BE /* KeychainAccess */; };
+		87D2BBBC235423F20029A9BE /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 87D2BBBB235423F20029A9BE /* SwiftPackageProductDependency */; };
+		87D2BBBF2354240A0029A9BE /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 87D2BBBE2354240A0029A9BE /* SwiftPackageProductDependency */; };
+		87D2BBC1235424140029A9BE /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 87D2BBC0235424140029A9BE /* SwiftPackageProductDependency */; };
+		87D2BBC3235427090029A9BE /* WaypointListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D2BBC2235427090029A9BE /* WaypointListViewController.swift */; };
+		87D2BBC5235427810029A9BE /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D2BBC4235427810029A9BE /* Waypoint.swift */; };
 		87F3CF532308F1DC001316AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F3CF522308F1DC001316AD /* Constants.swift */; };
 		87F3CF5A2308FCAB001316AD /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F3CF592308FCAB001316AD /* NotificationCenter.framework */; };
 		87F3CF5D2308FCAB001316AD /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F3CF5C2308FCAB001316AD /* TodayViewController.swift */; };
@@ -87,6 +89,8 @@
 		87D0853522ED9C8000D6A881 /* WidgetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDetailViewController.swift; sourceTree = "<group>"; };
 		87D0853722EDA7B900D6A881 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		87D0853922EDA9A500D6A881 /* Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
+		87D2BBC2235427090029A9BE /* WaypointListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointListViewController.swift; sourceTree = "<group>"; };
+		87D2BBC4235427810029A9BE /* Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
 		87F3CF522308F1DC001316AD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		87F3CF582308FCAA001316AD /* Pinned.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Pinned.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F3CF592308FCAB001316AD /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -104,8 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87D2BBBF2354240A0029A9BE /* KeychainAccess in Frameworks */,
-				87D2BBBC235423F20029A9BE /* SDWebImage in Frameworks */,
+				87D2BBBF2354240A0029A9BE /* BuildFile in Frameworks */,
+				87D2BBBC235423F20029A9BE /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87D2BBC1235424140029A9BE /* KeychainAccess in Frameworks */,
+				87D2BBC1235424140029A9BE /* BuildFile in Frameworks */,
 				87F3CF5A2308FCAB001316AD /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +132,7 @@
 				87BB90F322ED81040078EFEB /* Main.storyboard */,
 				87D0853722EDA7B900D6A881 /* SampleViewController.swift */,
 				87BB90F122ED81040078EFEB /* SubscriptionViewController.swift */,
+				87D2BBC2235427090029A9BE /* WaypointListViewController.swift */,
 				87D0853522ED9C8000D6A881 /* WidgetDetailViewController.swift */,
 				872748D522ED93D1005B7678 /* WidgetListViewController.swift */,
 			);
@@ -150,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				87D0853922EDA9A500D6A881 /* Samples.swift */,
+				87D2BBC4235427810029A9BE /* Waypoint.swift */,
 				872748C822ED8B69005B7678 /* Widget.swift */,
 			);
 			path = Models;
@@ -256,8 +262,8 @@
 			);
 			name = QuickStats;
 			packageProductDependencies = (
-				87D2BBBB235423F20029A9BE /* SDWebImage */,
-				87D2BBBE2354240A0029A9BE /* KeychainAccess */,
+				87D2BBBB235423F20029A9BE /* SwiftPackageProductDependency */,
+				87D2BBBE2354240A0029A9BE /* SwiftPackageProductDependency */,
 			);
 			productName = QuickStats;
 			productReference = 87BB90EC22ED81040078EFEB /* QuickStats.app */;
@@ -277,7 +283,7 @@
 			);
 			name = Pinned;
 			packageProductDependencies = (
-				87D2BBC0235424140029A9BE /* KeychainAccess */,
+				87D2BBC0235424140029A9BE /* SwiftPackageProductDependency */,
 			);
 			productName = Pinned;
 			productReference = 87F3CF582308FCAA001316AD /* Pinned.appex */;
@@ -327,8 +333,8 @@
 			);
 			mainGroup = 87BB90E322ED81030078EFEB;
 			packageReferences = (
-				87D2BBBA235423F20029A9BE /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				87D2BBBD2354240A0029A9BE /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				87D2BBBA235423F20029A9BE /* RemoteSwiftPackageReference */,
+				87D2BBBD2354240A0029A9BE /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 87BB90ED22ED81040078EFEB /* Products */;
 			projectDirPath = "";
@@ -381,7 +387,9 @@
 				872748C722ED89A6005B7678 /* API.swift in Sources */,
 				87BB90F022ED81040078EFEB /* AppDelegate.swift in Sources */,
 				872748C922ED8B69005B7678 /* Widget.swift in Sources */,
+				87D2BBC5235427810029A9BE /* Waypoint.swift in Sources */,
 				872748CF22ED8D5B005B7678 /* WidgetCollectionViewCell.swift in Sources */,
+				87D2BBC3235427090029A9BE /* WaypointListViewController.swift in Sources */,
 				C1D990B422EFF2FB00FEEE5A /* OSLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,7 +688,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		87D2BBBA235423F20029A9BE /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+		87D2BBBA235423F20029A9BE /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
 			requirement = {
@@ -688,7 +696,7 @@
 				minimumVersion = 5.2.3;
 			};
 		};
-		87D2BBBD2354240A0029A9BE /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+		87D2BBBD2354240A0029A9BE /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
 			requirement = {
@@ -699,19 +707,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		87D2BBBB235423F20029A9BE /* SDWebImage */ = {
+		87D2BBBB235423F20029A9BE /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 87D2BBBA235423F20029A9BE /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			package = 87D2BBBA235423F20029A9BE /* RemoteSwiftPackageReference */;
 			productName = SDWebImage;
 		};
-		87D2BBBE2354240A0029A9BE /* KeychainAccess */ = {
+		87D2BBBE2354240A0029A9BE /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 87D2BBBD2354240A0029A9BE /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			package = 87D2BBBD2354240A0029A9BE /* RemoteSwiftPackageReference */;
 			productName = KeychainAccess;
 		};
-		87D2BBC0235424140029A9BE /* KeychainAccess */ = {
+		87D2BBC0235424140029A9BE /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 87D2BBBD2354240A0029A9BE /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			package = 87D2BBBD2354240A0029A9BE /* RemoteSwiftPackageReference */;
 			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */

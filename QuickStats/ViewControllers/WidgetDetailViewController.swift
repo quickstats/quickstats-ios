@@ -17,7 +17,7 @@ private struct SectionGroup {
 class WidgetDetailViewController: UITableViewController, Storyboarded {
     fileprivate var tableSections = [
         SectionGroup(title: "Basic", count: 5),
-        SectionGroup(title: "Actions", count: 2)
+        SectionGroup(title: "Actions", count: 3)
     ]
 
     var timer: Timer?
@@ -97,6 +97,10 @@ class WidgetDetailViewController: UITableViewController, Storyboarded {
             cell.textLabel?.text = "Samples"
             cell.detailTextLabel?.text = ""
         case [1, 1]:
+            cell.accessoryType = .disclosureIndicator
+            cell.textLabel?.text = "Waypoints"
+            cell.detailTextLabel?.text = ""
+        case [1, 2]:
             cell.accessoryType = pinnedItems.contains(widget.id) ? .checkmark : .none
             cell.textLabel?.text = pinnedItems.contains(widget.id) ? "Unpin" : "Pin"
             cell.detailTextLabel?.text = ""
@@ -125,6 +129,10 @@ class WidgetDetailViewController: UITableViewController, Storyboarded {
             view.widget = widget
             navigationController?.pushViewController(view, animated: true)
         case [1, 1]:
+            let view = WaypointListViewController.instantiate()
+            view.widget = widget
+            navigationController?.pushViewController(view, animated: true)
+        case [1, 2]:
             if pinnedItems.contains(widget.id) {
                 pinnedItems = pinnedItems.filter {$0 != widget.id}
             } else {
