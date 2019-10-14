@@ -22,7 +22,8 @@ class SampleViewController: UITableViewController, Storyboarded {
         super.viewDidLoad()
 
         Sample.list(for: widget, limit: 100) { (samples) in
-            self.samples = samples.sorted { $0.timestamp < $1.timestamp }
+            // Sort Descending
+            self.samples = samples.sorted { $0.timestamp > $1.timestamp }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
