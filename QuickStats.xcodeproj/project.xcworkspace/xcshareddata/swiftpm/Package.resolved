@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "KeychainAccess",
+        "repositoryURL": "https://github.com/kishikawakatsumi/KeychainAccess",
+        "state": {
+          "branch": null,
+          "revision": "0046db4ab8fd7be31a59e57912dbb96639ad8ce9",
+          "version": "3.2.0"
+        }
+      },
+      {
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage",
+        "state": {
+          "branch": null,
+          "revision": "a42a22ff88ae300d888942ffd801e9744a11027e",
+          "version": "5.2.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
