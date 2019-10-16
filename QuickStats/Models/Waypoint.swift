@@ -11,8 +11,8 @@ import Foundation
 struct Waypoint: Codable {
     let timestamp: Date
     let body: String
-    let lat: Int
-    let lng: Int
+    let lat: Float
+    let lon: Float
     let state: String
 }
 
