@@ -33,8 +33,8 @@ extension Waypoint {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 decoder.dateDecodingStrategy = .custom(dateDecode)
                 do {
-                    let waypoints = try decoder.decode([Waypoint].self, from: data)
-                    completionHandler(waypoints)
+                    let waypoints = try decoder.decode(WaypointResponse.self, from: data)
+                    completionHandler(waypoints.results)
                 } catch let error {
                     print(error)
                     print(data.toString())

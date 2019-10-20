@@ -30,8 +30,8 @@ extension Sample {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 decoder.dateDecodingStrategy = .custom(dateDecode)
                 do {
-                    let samples = try decoder.decode([Sample].self, from: data)
-                    completionHandler(samples)
+                    let samples = try decoder.decode(SampleResponse.self, from: data)
+                    completionHandler(samples.results)
                 } catch let error {
                     print(error)
                     print(data.toString())
