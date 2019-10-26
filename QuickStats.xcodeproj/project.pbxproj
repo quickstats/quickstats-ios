@@ -18,7 +18,6 @@
 		872748D422ED8E56005B7678 /* CollectionView+RegisterXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748D322ED8E56005B7678 /* CollectionView+RegisterXib.swift */; };
 		872748D622ED93D1005B7678 /* WidgetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748D522ED93D1005B7678 /* WidgetListViewController.swift */; };
 		87BB90F022ED81040078EFEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB90EF22ED81040078EFEB /* AppDelegate.swift */; };
-		87BB90F222ED81040078EFEB /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB90F122ED81040078EFEB /* SubscriptionViewController.swift */; };
 		87BB90F522ED81040078EFEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB90F322ED81040078EFEB /* Main.storyboard */; };
 		87BB90F722ED81060078EFEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB90F622ED81060078EFEB /* Assets.xcassets */; };
 		87BB90FA22ED81060078EFEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB90F822ED81060078EFEB /* LaunchScreen.storyboard */; };
@@ -81,7 +80,6 @@
 		872748D522ED93D1005B7678 /* WidgetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetListViewController.swift; sourceTree = "<group>"; };
 		87BB90EC22ED81040078EFEB /* QuickStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB90EF22ED81040078EFEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		87BB90F122ED81040078EFEB /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		87BB90F422ED81040078EFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87BB90F622ED81060078EFEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87BB90F922ED81060078EFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				872748BE22ED81E8005B7678 /* LoginViewController.swift */,
 				87BB90F322ED81040078EFEB /* Main.storyboard */,
 				87D0853722EDA7B900D6A881 /* SampleViewController.swift */,
-				87BB90F122ED81040078EFEB /* SubscriptionViewController.swift */,
 				87D2BBC2235427090029A9BE /* WaypointListViewController.swift */,
 				87D0853522ED9C8000D6A881 /* WidgetDetailViewController.swift */,
 				872748D522ED93D1005B7678 /* WidgetListViewController.swift */,
@@ -375,7 +372,6 @@
 			files = (
 				872748BF22ED81E8005B7678 /* LoginViewController.swift in Sources */,
 				87D0853A22EDA9A500D6A881 /* Samples.swift in Sources */,
-				87BB90F222ED81040078EFEB /* SubscriptionViewController.swift in Sources */,
 				872748C522ED8551005B7678 /* Storyboarded.swift in Sources */,
 				872748CB22ED8BB8005B7678 /* Extensions.swift in Sources */,
 				872748D422ED8E56005B7678 /* CollectionView+RegisterXib.swift in Sources */,

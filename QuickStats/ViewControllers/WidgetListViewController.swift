@@ -9,38 +9,72 @@
 import UIKit
 import os.log
 
+enum WidgetFilter {
+    case All
+    case Chart
+    case Location
+    case Countdown
+}
+
 class WidgetListViewController: UICollectionViewController {
-    private var subscriptions: [Widget]?
+    private var filteredWidgets = [Widget]()
+    private var allWidgets = [Widget]()
+
+    @IBOutlet var queryToggle: UISegmentedControl!
     private var refreshControl: UIRefreshControl!
     private let logger = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: "WidgetListViewController")
+    private var selectedFilter = WidgetFilter.All
 
     @objc func loadData() {
-        self.filterLoadData {_ in true}
+        refreshControl.beginRefreshing()
+        switch queryToggle.selectedSegmentIndex {
+        case 0:
+
+            Widget.subscriptions { (widgets) in
+                self.allWidgets = widgets.sorted { $0.timestamp < $1.timestamp }
+                self.setFilter(filter: self.selectedFilter)
+            }
+        case 1:
+            Widget.list { (widgets) in
+                self.allWidgets = widgets.sorted { $0.timestamp < $1.timestamp }
+                self.setFilter(filter: self.selectedFilter)
+            }
+        default:
+            fatalError("Unknown index for selector")
+        }
     }
 
-    func filterLoadData(filter: @escaping (Widget) -> Bool) {
-        Widget.list { (widgets) in
-            self.subscriptions = widgets.filter(filter).sorted { $0.timestamp < $1.timestamp }
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-                self.refreshControl.endRefreshing()
-            }
+    func setFilter(filter: WidgetFilter) {
+        selectedFilter = filter
+        switch selectedFilter {
+        case .All:
+            filteredWidgets = allWidgets
+        case .Chart:
+            filteredWidgets = allWidgets.filter { $0.type == .Chart }
+        case .Location:
+            filteredWidgets = allWidgets.filter { $0.type == .Location }
+        case .Countdown:
+            filteredWidgets = allWidgets.filter { $0.type == .Countdown }
+        }
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+            self.refreshControl.endRefreshing()
         }
     }
 
     @IBAction func clickOrganize(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Organize", message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "All", style: .default) { (_) in
-            self.filterLoadData {_ in true}
+            self.setFilter(filter: .All)
         })
         alert.addAction(UIAlertAction(title: "Filter Countdown", style: .default) { (_) in
-            self.filterLoadData { $0.type == .Countdown }
+            self.setFilter(filter: .Countdown)
         })
         alert.addAction(UIAlertAction(title: "Filter Location", style: .default) { (_) in
-            self.filterLoadData { $0.type == .Location }
+            self.setFilter(filter: .Location)
         })
         alert.addAction(UIAlertAction(title: "Filter Chart", style: .default) { (_) in
-            self.filterLoadData { $0.type == .Chart }
+            self.setFilter(filter: .Chart)
         })
         alert.popoverPresentationController?.barButtonItem = sender
         alert.popoverPresentationController?.sourceView = collectionView
@@ -58,6 +92,11 @@ class WidgetListViewController: UICollectionViewController {
 
         loadData()
     }
+
+    @IBAction func toggleSelection(_ sender: UISegmentedControl) {
+        loadData()
+    }
+
 }
 
 extension WidgetListViewController: UICollectionViewDelegateFlowLayout {
@@ -65,11 +104,11 @@ extension WidgetListViewController: UICollectionViewDelegateFlowLayout {
         return 1
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return subscriptions?.count ?? 0
+        return filteredWidgets.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withIdentifier: WidgetCollectionViewCell.self, for: indexPath)
-        cell.widget = subscriptions?[indexPath.row]
+        cell.widget = filteredWidgets[indexPath.row]
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -84,7 +123,7 @@ extension WidgetListViewController: UICollectionViewDelegateFlowLayout {
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let widgetDetail = WidgetDetailViewController.instantiate()
-        widgetDetail.widget = subscriptions?[indexPath.row]
+        widgetDetail.widget = filteredWidgets[indexPath.row]
         let navigation = UINavigationController(rootViewController: widgetDetail)
         navigation.modalPresentationStyle = .formSheet
         present(navigation, animated: true, completion: nil)
