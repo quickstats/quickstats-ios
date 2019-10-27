@@ -20,7 +20,7 @@ class WidgetCollectionViewCell: UICollectionViewCell {
             titleLabel.text = widget?.title
 
             switch widget!.type {
-            case .Countdown:
+            case .Countdown, .Location:
                 timer = Timer.scheduledTimer(withTimeInterval: .init(1), repeats: true, block: updateCounter(timer:))
                 updateCounter(timer: timer!)
             default:

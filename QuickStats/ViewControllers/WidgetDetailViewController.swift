@@ -17,7 +17,7 @@ private struct SectionGroup {
 class WidgetDetailViewController: UITableViewController, Storyboarded {
     fileprivate var tableSections = [
         SectionGroup(title: "Basic", count: 5),
-        SectionGroup(title: "Actions", count: 3)
+        SectionGroup(title: "Actions", count: 4)
     ]
 
     var timer: Timer?
@@ -104,6 +104,10 @@ class WidgetDetailViewController: UITableViewController, Storyboarded {
             cell.accessoryType = pinnedItems.contains(widget.id) ? .checkmark : .none
             cell.textLabel?.text = pinnedItems.contains(widget.id) ? "Unpin" : "Pin"
             cell.detailTextLabel?.text = ""
+        case [1, 3]:
+            cell.accessoryType = .disclosureIndicator
+            cell.textLabel?.text = "Subscribe"
+            cell.detailTextLabel?.text = ""
         default:
             fatalError("Unknown section for \(indexPath)")
         }
@@ -140,6 +144,10 @@ class WidgetDetailViewController: UITableViewController, Storyboarded {
             }
             Settings.shared.set(pinnedItems, forKey: .pinnedIDs)
             tableView.reloadData()
+        case [1, 3]:
+            widget.subscribe { (widget) in
+                print(widget)
+            }
         default:
             print("unknown section")
         }

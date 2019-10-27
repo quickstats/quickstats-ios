@@ -69,6 +69,16 @@ extension Widget {
         }
     }
 
+    func subscribe(completionHandler: @escaping (Widget) -> Void) {
+        authedRequest(path: "/api/widget/\(self.id)/subscribe", method: "POST", queryItems: []) { (_, data) in
+            print(data)
+        }
+    }
+
+    func unsubscribe(completionHandler: @escaping (Widget) -> Void) {
+
+    }
+
     static func subscriptions(completionHandler: @escaping ([Widget]) -> Void) {
         let query = [URLQueryItem(name: "limit", value: "100")]
 
