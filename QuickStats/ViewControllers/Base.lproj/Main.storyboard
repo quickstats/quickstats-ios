@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ehb-7W-3Qa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ehb-7W-3Qa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -168,8 +168,8 @@
                                 <action selector="clickOrganize:" destination="Toc-VB-gt0" id="XYS-5B-0lv"/>
                             </connections>
                         </barButtonItem>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="NrM-TM-1dB">
-                            <rect key="frame" x="88" y="5.5" width="209" height="33"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="NrM-TM-1dB">
+                            <rect key="frame" x="102.5" y="5.5" width="209" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Subscriptions"/>
@@ -179,7 +179,11 @@
                                 <action selector="toggleSelection:" destination="Toc-VB-gt0" eventType="primaryActionTriggered" id="DQG-n3-lTW"/>
                             </connections>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="cqs-ME-Hbi"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="cqs-ME-Hbi">
+                            <connections>
+                                <action selector="clickNewWidget:" destination="Toc-VB-gt0" id="bRj-Wl-wtO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="queryToggle" destination="NrM-TM-1dB" id="3YF-cs-qKX"/>
@@ -369,6 +373,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Pg-P9-G2L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3597" y="688"/>
+        </scene>
+        <!--Widget Create View Controller-->
+        <scene sceneID="mwJ-Kx-6qU">
+            <objects>
+                <tableViewController storyboardIdentifier="WidgetCreateViewController" id="8YO-H5-9lr" customClass="WidgetCreateViewController" customModule="QuickStats" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Whj-03-Ca1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="IZ5-kG-Bu1">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IZ5-kG-Bu1" id="5sm-O2-iPW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8YO-H5-9lr" id="Gdj-bf-WhR"/>
+                            <outlet property="delegate" destination="8YO-H5-9lr" id="TNP-KV-Du2"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNW-ID-rJK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4465" y="688"/>
         </scene>
         <!--Widgets-->
         <scene sceneID="feJ-0v-sCo">

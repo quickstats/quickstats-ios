@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ListTableViewCell" customModule="QuickStats" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQJ-hh-WOB">
+                        <rect key="frame" x="8" y="11.5" width="128" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="128" id="2PP-pb-7D2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hae-Qc-b3N">
+                        <rect key="frame" x="144" y="-59" width="168" height="162"/>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="F4E-l1-cVx"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="aQE-wK-YU1"/>
+                        </connections>
+                    </pickerView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Hae-Qc-b3N" firstAttribute="leading" secondItem="rQJ-hh-WOB" secondAttribute="trailing" constant="8" id="7PU-vK-M2Z"/>
+                    <constraint firstItem="Hae-Qc-b3N" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9PU-5T-1xO"/>
+                    <constraint firstItem="rQJ-hh-WOB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GSE-yF-f6X"/>
+                    <constraint firstAttribute="trailing" secondItem="Hae-Qc-b3N" secondAttribute="trailing" constant="8" id="hxu-sz-qPP"/>
+                    <constraint firstItem="rQJ-hh-WOB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="zZc-fY-l4c"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="labelView" destination="rQJ-hh-WOB" id="yyS-6G-Ma2"/>
+                <outlet property="pickerView" destination="Hae-Qc-b3N" id="Rak-Q6-2dS"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="98.4375"/>
+        </tableViewCell>
+    </objects>
+</document>

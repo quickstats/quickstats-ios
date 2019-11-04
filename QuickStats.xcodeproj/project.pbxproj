@@ -17,6 +17,12 @@
 		872748D022ED8D5B005B7678 /* WidgetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 872748CE22ED8D5B005B7678 /* WidgetCollectionViewCell.xib */; };
 		872748D422ED8E56005B7678 /* CollectionView+RegisterXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748D322ED8E56005B7678 /* CollectionView+RegisterXib.swift */; };
 		872748D622ED93D1005B7678 /* WidgetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872748D522ED93D1005B7678 /* WidgetListViewController.swift */; };
+		878E451523701B5000DDFCB3 /* WidgetCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878E451423701B5000DDFCB3 /* WidgetCreateViewController.swift */; };
+		878E451723701DDA00DDFCB3 /* TableView+RegisterXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878E451623701DDA00DDFCB3 /* TableView+RegisterXib.swift */; };
+		878E451A23701E6900DDFCB3 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878E451823701E6900DDFCB3 /* TextTableViewCell.swift */; };
+		878E451B23701E6900DDFCB3 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878E451923701E6900DDFCB3 /* TextTableViewCell.xib */; };
+		878E451E2370205100DDFCB3 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878E451C2370205100DDFCB3 /* ListTableViewCell.swift */; };
+		878E451F2370205100DDFCB3 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878E451D2370205100DDFCB3 /* ListTableViewCell.xib */; };
 		87BB90F022ED81040078EFEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB90EF22ED81040078EFEB /* AppDelegate.swift */; };
 		87BB90F522ED81040078EFEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BB90F322ED81040078EFEB /* Main.storyboard */; };
 		87BB90F722ED81060078EFEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BB90F622ED81060078EFEB /* Assets.xcassets */; };
@@ -78,6 +84,12 @@
 		872748CE22ED8D5B005B7678 /* WidgetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetCollectionViewCell.xib; sourceTree = "<group>"; };
 		872748D322ED8E56005B7678 /* CollectionView+RegisterXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+RegisterXib.swift"; sourceTree = "<group>"; };
 		872748D522ED93D1005B7678 /* WidgetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetListViewController.swift; sourceTree = "<group>"; };
+		878E451423701B5000DDFCB3 /* WidgetCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetCreateViewController.swift; sourceTree = "<group>"; };
+		878E451623701DDA00DDFCB3 /* TableView+RegisterXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+RegisterXib.swift"; sourceTree = "<group>"; };
+		878E451823701E6900DDFCB3 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		878E451923701E6900DDFCB3 /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
+		878E451C2370205100DDFCB3 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		878E451D2370205100DDFCB3 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		87BB90EC22ED81040078EFEB /* QuickStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BB90EF22ED81040078EFEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87BB90F422ED81040078EFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,12 +138,11 @@
 		872748BD22ED8177005B7678 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				878E451323701B2E00DDFCB3 /* Widget */,
 				872748BE22ED81E8005B7678 /* LoginViewController.swift */,
 				87BB90F322ED81040078EFEB /* Main.storyboard */,
 				87D0853722EDA7B900D6A881 /* SampleViewController.swift */,
 				87D2BBC2235427090029A9BE /* WaypointListViewController.swift */,
-				87D0853522ED9C8000D6A881 /* WidgetDetailViewController.swift */,
-				872748D522ED93D1005B7678 /* WidgetListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -161,6 +172,10 @@
 		872748D122ED8D62005B7678 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				878E451C2370205100DDFCB3 /* ListTableViewCell.swift */,
+				878E451D2370205100DDFCB3 /* ListTableViewCell.xib */,
+				878E451823701E6900DDFCB3 /* TextTableViewCell.swift */,
+				878E451923701E6900DDFCB3 /* TextTableViewCell.xib */,
 				872748CD22ED8D5B005B7678 /* WidgetCollectionViewCell.swift */,
 				872748CE22ED8D5B005B7678 /* WidgetCollectionViewCell.xib */,
 			);
@@ -172,8 +187,19 @@
 			children = (
 				872748D322ED8E56005B7678 /* CollectionView+RegisterXib.swift */,
 				C1D990B322EFF2FB00FEEE5A /* OSLog.swift */,
+				878E451623701DDA00DDFCB3 /* TableView+RegisterXib.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		878E451323701B2E00DDFCB3 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				878E451423701B5000DDFCB3 /* WidgetCreateViewController.swift */,
+				87D0853522ED9C8000D6A881 /* WidgetDetailViewController.swift */,
+				872748D522ED93D1005B7678 /* WidgetListViewController.swift */,
+			);
+			path = Widget;
 			sourceTree = "<group>";
 		};
 		87BB90E322ED81030078EFEB = {
@@ -349,6 +375,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				872748D022ED8D5B005B7678 /* WidgetCollectionViewCell.xib in Resources */,
+				878E451F2370205100DDFCB3 /* ListTableViewCell.xib in Resources */,
+				878E451B23701E6900DDFCB3 /* TextTableViewCell.xib in Resources */,
 				87BB90FA22ED81060078EFEB /* LaunchScreen.storyboard in Resources */,
 				87BB90F722ED81060078EFEB /* Assets.xcassets in Resources */,
 				87BB90F522ED81040078EFEB /* Main.storyboard in Resources */,
@@ -382,8 +410,12 @@
 				872748C222ED839D005B7678 /* Settings.swift in Sources */,
 				872748C722ED89A6005B7678 /* API.swift in Sources */,
 				87BB90F022ED81040078EFEB /* AppDelegate.swift in Sources */,
+				878E451523701B5000DDFCB3 /* WidgetCreateViewController.swift in Sources */,
 				872748C922ED8B69005B7678 /* Widget.swift in Sources */,
+				878E451E2370205100DDFCB3 /* ListTableViewCell.swift in Sources */,
+				878E451A23701E6900DDFCB3 /* TextTableViewCell.swift in Sources */,
 				87D2BBC5235427810029A9BE /* Waypoint.swift in Sources */,
+				878E451723701DDA00DDFCB3 /* TableView+RegisterXib.swift in Sources */,
 				872748CF22ED8D5B005B7678 /* WidgetCollectionViewCell.swift in Sources */,
 				87D2BBC3235427090029A9BE /* WaypointListViewController.swift in Sources */,
 				C1D990B422EFF2FB00FEEE5A /* OSLog.swift in Sources */,

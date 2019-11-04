@@ -26,20 +26,7 @@ struct Widget: Codable {
     let value: Double
     let more: URL?
     let type: WidgetType
-    let publicWidget: Bool
-
-    private enum CodingKeys: String, CodingKey {
-        case owner
-        case id
-        case timestamp
-        case title
-        case description
-        case icon
-        case value
-        case more
-        case type
-        case publicWidget = "public"
-    }
+    let `public`: Bool
 }
 
 struct WidgetResponse: Codable {

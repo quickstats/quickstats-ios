@@ -83,6 +83,12 @@ class WidgetListViewController: UICollectionViewController {
         loadData()
     }
 
+    @IBAction func clickNewWidget(_ sender: UIBarButtonItem) {
+        let vc = WidgetCreateViewController.instantiate()
+        let navigation = UINavigationController(rootViewController: vc)
+        navigation.modalPresentationStyle = .formSheet
+        present(navigation, animated: true, completion: nil)
+    }
 }
 
 extension WidgetListViewController: UICollectionViewDelegateFlowLayout {
