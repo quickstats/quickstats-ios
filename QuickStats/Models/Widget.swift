@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 
-enum WidgetType: String, Codable {
+enum WidgetType: String, Codable, CaseIterable {
     case Chart
     case Countdown
     case Location
+    case Streak
 }
 
 struct Widget: Codable {

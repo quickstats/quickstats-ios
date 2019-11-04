@@ -9,13 +9,6 @@
 import UIKit
 import os.log
 
-enum WidgetFilter {
-    case All
-    case Chart
-    case Location
-    case Countdown
-}
-
 class WidgetListViewController: UICollectionViewController {
     private var filteredWidgets = [Widget]()
     private var allWidgets = [Widget]()
@@ -23,7 +16,7 @@ class WidgetListViewController: UICollectionViewController {
     @IBOutlet var queryToggle: UISegmentedControl!
     private var refreshControl: UIRefreshControl!
     private let logger = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: "WidgetListViewController")
-    private var selectedFilter = WidgetFilter.All
+    private var selectedFilter: WidgetType?
 
     @objc func loadData() {
         refreshControl.beginRefreshing()
@@ -44,18 +37,13 @@ class WidgetListViewController: UICollectionViewController {
         }
     }
 
-    func setFilter(filter: WidgetFilter) {
-        selectedFilter = filter
-        switch selectedFilter {
-        case .All:
+    func setFilter(filter: WidgetType?) {
+        if let filteredBy = filter {
+            filteredWidgets = allWidgets.filter { $0.type == filteredBy}
+        } else {
             filteredWidgets = allWidgets
-        case .Chart:
-            filteredWidgets = allWidgets.filter { $0.type == .Chart }
-        case .Location:
-            filteredWidgets = allWidgets.filter { $0.type == .Location }
-        case .Countdown:
-            filteredWidgets = allWidgets.filter { $0.type == .Countdown }
         }
+
         DispatchQueue.main.async {
             self.collectionView.reloadData()
             self.refreshControl.endRefreshing()
@@ -65,17 +53,15 @@ class WidgetListViewController: UICollectionViewController {
     @IBAction func clickOrganize(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Organize", message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "All", style: .default) { (_) in
-            self.setFilter(filter: .All)
+            self.setFilter(filter: nil)
         })
-        alert.addAction(UIAlertAction(title: "Filter Countdown", style: .default) { (_) in
-            self.setFilter(filter: .Countdown)
-        })
-        alert.addAction(UIAlertAction(title: "Filter Location", style: .default) { (_) in
-            self.setFilter(filter: .Location)
-        })
-        alert.addAction(UIAlertAction(title: "Filter Chart", style: .default) { (_) in
-            self.setFilter(filter: .Chart)
-        })
+
+        for type in WidgetType.allCases {
+            alert.addAction(UIAlertAction(title: "Filter \(type)", style: .default) { (_) in
+                self.setFilter(filter: type)
+            })
+        }
+
         alert.popoverPresentationController?.barButtonItem = sender
         alert.popoverPresentationController?.sourceView = collectionView
         present(alert, animated: true, completion: nil)
