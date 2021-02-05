@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		873C524D25CD6D4200B2F70E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 873C524C25CD6D4200B2F70E /* KeychainAccess */; };
 		876EA71D25CD6127004DF213 /* QuickStatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876EA71C25CD6127004DF213 /* QuickStatsApp.swift */; };
 		876EA71F25CD6127004DF213 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876EA71E25CD6127004DF213 /* ContentView.swift */; };
 		876EA72125CD6128004DF213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 876EA72025CD6128004DF213 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				873C524D25CD6D4200B2F70E /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +193,9 @@
 			dependencies = (
 			);
 			name = QuickStats;
+			packageProductDependencies = (
+				873C524C25CD6D4200B2F70E /* KeychainAccess */,
+			);
 			productName = QuickStats;
 			productReference = 876EA71925CD6127004DF213 /* QuickStats.app */;
 			productType = "com.apple.product-type.application";
@@ -262,6 +267,9 @@
 				Base,
 			);
 			mainGroup = 876EA71025CD6127004DF213;
+			packageReferences = (
+				873C524B25CD6D4200B2F70E /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 876EA71A25CD6127004DF213 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -632,6 +640,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		873C524B25CD6D4200B2F70E /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		873C524C25CD6D4200B2F70E /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 873C524B25CD6D4200B2F70E /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 876EA71125CD6127004DF213 /* Project object */;
 }

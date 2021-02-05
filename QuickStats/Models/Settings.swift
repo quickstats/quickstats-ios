@@ -6,15 +6,23 @@
 //
 
 import Foundation
+import KeychainAccess
 import SwiftUI
 
 typealias Login = String
 
 class UserSettings: ObservableObject {
+    private let keychain = Keychain(service: Bundle.main.bundleIdentifier!)
+
     @AppStorage("login") var login: Login? {
         willSet {
             objectWillChange.send()
         }
+    }
+
+    var password: String {
+        set { try? keychain.set(newValue, key: "login") }
+        get { try! keychain.get("login") ?? "" }
     }
 }
 

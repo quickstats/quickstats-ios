@@ -44,6 +44,7 @@ struct LoginView: View {
 
     private func onRecieve(_ data: Widget.List) {
         settings.login = login
+        settings.password = password
     }
 
     func actionLogin() {
