@@ -10,10 +10,13 @@ import SwiftUI
 @main
 struct QuickStatsApp: App {
     var settings = UserSettings()
+    var api = API()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(settings)
+                .environmentObject(api)
         }
     }
 }
