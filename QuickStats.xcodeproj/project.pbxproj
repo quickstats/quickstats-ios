@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		873C524D25CD6D4200B2F70E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 873C524C25CD6D4200B2F70E /* KeychainAccess */; };
 		873C525225CD6F3300B2F70E /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C525125CD6F3300B2F70E /* WidgetView.swift */; };
+		873C525725CD745E00B2F70E /* WidgetFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C525625CD745E00B2F70E /* WidgetFetcher.swift */; };
 		876EA71D25CD6127004DF213 /* QuickStatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876EA71C25CD6127004DF213 /* QuickStatsApp.swift */; };
 		876EA71F25CD6127004DF213 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876EA71E25CD6127004DF213 /* ContentView.swift */; };
 		876EA72125CD6128004DF213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 876EA72025CD6128004DF213 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		873C525125CD6F3300B2F70E /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		873C525625CD745E00B2F70E /* WidgetFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetFetcher.swift; sourceTree = "<group>"; };
 		876EA71925CD6127004DF213 /* QuickStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		876EA71C25CD6127004DF213 /* QuickStatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickStatsApp.swift; sourceTree = "<group>"; };
 		876EA71E25CD6127004DF213 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				876EA75F25CD6374004DF213 /* MainView.swift */,
 				876EA77F25CD6A22004DF213 /* SettingsView.swift */,
 				873C525125CD6F3300B2F70E /* WidgetView.swift */,
+				873C525625CD745E00B2F70E /* WidgetFetcher.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				876EA77025CD67C6004DF213 /* URLSession+Extensions.swift in Sources */,
 				876EA74F25CD61E8004DF213 /* Settings.swift in Sources */,
 				876EA71F25CD6127004DF213 /* ContentView.swift in Sources */,
+				873C525725CD745E00B2F70E /* WidgetFetcher.swift in Sources */,
 				876EA78025CD6A22004DF213 /* SettingsView.swift in Sources */,
 				873C525225CD6F3300B2F70E /* WidgetView.swift in Sources */,
 				876EA75825CD6285004DF213 /* LoginView.swift in Sources */,
