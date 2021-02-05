@@ -19,6 +19,7 @@
 		876EA76525CD64D0004DF213 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876EA76425CD64D0004DF213 /* Widget.swift */; };
 		876EA76A25CD6521004DF213 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876EA76925CD6521004DF213 /* Api.swift */; };
 		876EA77025CD67C6004DF213 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876EA76F25CD67C6004DF213 /* URLSession+Extensions.swift */; };
+		876EA78025CD6A22004DF213 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876EA77F25CD6A22004DF213 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		876EA76425CD64D0004DF213 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
 		876EA76925CD6521004DF213 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		876EA76F25CD67C6004DF213 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
+		876EA77F25CD6A22004DF213 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			children = (
 				876EA75725CD6285004DF213 /* LoginView.swift */,
 				876EA75F25CD6374004DF213 /* MainView.swift */,
+				876EA77F25CD6A22004DF213 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				876EA77025CD67C6004DF213 /* URLSession+Extensions.swift in Sources */,
 				876EA74F25CD61E8004DF213 /* Settings.swift in Sources */,
 				876EA71F25CD6127004DF213 /* ContentView.swift in Sources */,
+				876EA78025CD6A22004DF213 /* SettingsView.swift in Sources */,
 				876EA75825CD6285004DF213 /* LoginView.swift in Sources */,
 				876EA76025CD6374004DF213 /* MainView.swift in Sources */,
 				876EA71D25CD6127004DF213 /* QuickStatsApp.swift in Sources */,

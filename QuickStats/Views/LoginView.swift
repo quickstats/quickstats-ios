@@ -10,6 +10,7 @@ import SwiftUI
 
 struct LoginView: View {
     @EnvironmentObject var api: API
+    @EnvironmentObject var settings: UserSettings
     @State private var subscriptions = Set<AnyCancellable>()
 
     @State private var login: Login = ""
@@ -42,7 +43,7 @@ struct LoginView: View {
     }
 
     private func onRecieve(_ data: Widget.List) {
-        print(data)
+        settings.login = login
     }
 
     func actionLogin() {

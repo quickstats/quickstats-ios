@@ -14,7 +14,14 @@ struct ContentView: View {
         if settings.login == nil {
             LoginView()
         } else {
-            MainView()
+            TabView {
+                MainView()
+                    .tag(0)
+                    .tabItem { Label("Main", systemImage: "house") }
+                SettingsView()
+                    .tag(1)
+                    .tabItem { Label("Settings", systemImage: "gear") }
+            }
         }
     }
 }

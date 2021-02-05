@@ -11,7 +11,11 @@ import SwiftUI
 typealias Login = String
 
 class UserSettings: ObservableObject {
-    @AppStorage("login") var login: Login?
+    @AppStorage("login") var login: Login? {
+        willSet {
+            objectWillChange.send()
+        }
+    }
 }
 
 extension Login {
