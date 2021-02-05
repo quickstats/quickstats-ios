@@ -8,11 +8,13 @@
 import Foundation
 import SwiftUI
 
-enum WidgetType: String, Codable {
+enum WidgetType: String, CaseIterable, Identifiable, Codable {
     case countdown = "Countdown"
     case chart = "Chart"
     case location = "Location"
     case streak = "Streak"
+
+    var id: String { self.rawValue }
 }
 
 struct Widget: Codable, Identifiable {

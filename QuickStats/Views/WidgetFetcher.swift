@@ -9,7 +9,7 @@ import Combine
 import SwiftUI
 
 struct WidgetFetcher<Content: View>: View {
-    var content: ([Widget]) -> Content
+    var content: (Binding<[Widget]>) -> Content
 
     @EnvironmentObject var api: API
     @EnvironmentObject var settings: UserSettings
@@ -18,7 +18,7 @@ struct WidgetFetcher<Content: View>: View {
     @State private var widgets = [Widget]()
 
     var body: some View {
-        content(widgets)
+        content($widgets)
             .onAppear(perform: load)
     }
 
