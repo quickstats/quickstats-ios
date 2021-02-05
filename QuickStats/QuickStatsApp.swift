@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct QuickStatsApp: App {
+    var settings = UserSettings()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(settings)
         }
     }
 }
