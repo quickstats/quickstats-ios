@@ -11,9 +11,13 @@ struct SettingsView: View {
     @EnvironmentObject var settings: UserSettings
 
     var body: some View {
-        List {
-            Button("Logout", action: actionLogout)
+        NavigationView {
+            List {
+                Button("Logout", action: actionLogout)
+            }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationTitle("Settings")
     }
 
     func actionLogout() {

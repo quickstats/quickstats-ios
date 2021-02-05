@@ -11,6 +11,7 @@ struct Widget: Codable, Identifiable {
     var id: UUID
     var title: String
     var description: String
+    var value: Double
 
     struct List: Codable {
         var count: Int

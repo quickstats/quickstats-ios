@@ -16,11 +16,21 @@ struct MainView: View {
     @State var widgets = [Widget]()
 
     var body: some View {
-        List {
-            ForEach(widgets) { widget in
-                Text(widget.title)
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: [.init(.adaptive(minimum: 200, maximum: 300))]) {
+                    ForEach(widgets) { widget in
+                        WidgetView(widget: widget)
+                            .frame(minWidth: 200, maxWidth: .infinity, minHeight: 200)
+                            .cornerRadius(10)
+                            .padding()
+                    }
+                }
             }
-        }.onAppear(perform: load)
+            .onAppear(perform: load)
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationTitle("Home")
     }
 
     private func onReceive(completion: Subscribers.Completion<Error>) {
@@ -38,7 +48,8 @@ struct MainView: View {
 
     func load() {
         guard let login = settings.login else { return }
-        var request = api.request(login: login, path: "/api/widget", qs: [])
+        var request = api.request(
+            login: login, path: "/api/widget", qs: [.init(name: "limit", value: "200")])
         request.addBasicAuth(username: login.username, password: settings.password)
         URLSession.shared.dataTaskPublisher(for: request)
             .map { $0.data }
