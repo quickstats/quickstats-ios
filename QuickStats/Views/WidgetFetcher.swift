@@ -32,7 +32,7 @@ struct WidgetFetcher<Content: View>: View {
     }
 
     private func onRecieve(_ data: Widget.List) {
-        widgets = data.results
+        widgets = data.results.sorted { $0.timestamp > $1.timestamp }
     }
 
     func load() {
@@ -42,7 +42,7 @@ struct WidgetFetcher<Content: View>: View {
         request.addBasicAuth(username: login.username, password: settings.password)
         URLSession.shared.dataTaskPublisher(for: request)
             .map { $0.data }
-            .decode(type: Widget.List.self, decoder: JSONDecoder.init())
+            .decode(type: Widget.List.self, decoder: JSONDecoder.djangoDecoder)
             .subscribe(on: DispatchQueue.main)
             .sink(receiveCompletion: onReceive, receiveValue: onRecieve)
             .store(in: &subscriptions)

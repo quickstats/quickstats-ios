@@ -17,8 +17,17 @@ struct WidgetView: View {
             Text(widget.description)
                 .font(.caption)
             Spacer()
-            Text(widget.value.description)
-                .font(.title)
+
+            switch widget.type {
+            case .countdown:
+                CountdownView(date: widget.timestamp)
+                    .font(.title)
+            default:
+                Text(widget.value.description)
+                    .font(.title)
+                Text(widget.timestamp.debugDescription)
+            }
+
         }
         .minimumScaleFactor(0.5)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -31,6 +40,7 @@ struct WidgetView_Previews: PreviewProvider {
     static var previews: some View {
         WidgetView(
             widget: .init(
-                id: .init(), title: "test", description: "description", value: 100, type: .streak))
+                id: .init(), title: "test", description: "description", value: 100, type: .streak,
+                timestamp: .distantFuture))
     }
 }

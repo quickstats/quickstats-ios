@@ -23,6 +23,7 @@ struct Widget: Codable, Identifiable {
     var description: String
     var value: Double
     var type: WidgetType
+    var timestamp: Date
 
     struct List: Codable {
         var count: Int
