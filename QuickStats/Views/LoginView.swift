@@ -52,7 +52,7 @@ struct LoginView: View {
         request.addBasicAuth(username: login.username, password: password)
         URLSession.shared.dataTaskPublisher(for: request)
             .map { $0.data }
-            .decode(type: Widget.List.self, decoder: JSONDecoder.init())
+            .decode(type: Widget.List.self, decoder: JSONDecoder.djangoDecoder)
             .subscribe(on: DispatchQueue.main)
             .sink(receiveCompletion: onReceive, receiveValue: onRecieve)
             .store(in: &subscriptions)

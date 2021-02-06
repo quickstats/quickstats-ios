@@ -35,13 +35,15 @@ struct MainView: View {
             WidgetFetcher { widgets in
                 WidgetFilter(widgets: widgets) { filtered in
                     ScrollView {
-                        LazyVGrid(columns: [.init(.adaptive(minimum: 200, maximum: 300))]) {
+                        LazyVGrid(
+                            columns: [.init(.adaptive(minimum: 150, maximum: 150))], spacing: 5
+                        ) {
                             ForEach(filtered) { widget in
                                 NavigationLink(destination: WidgetDetail(widget: widget)) {
                                     WidgetView(widget: widget)
-                                        .frame(width: 200, height: 200)
+                                        .minimumScaleFactor(0.1)
+                                        .frame(width: 150, height: 150)
                                         .cornerRadius(10)
-                                        .padding()
                                 }
                             }
                         }

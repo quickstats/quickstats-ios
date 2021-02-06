@@ -14,7 +14,6 @@ struct WidgetDetail: View {
             WidgetView(widget: widget)
                 .frame(width: 200, height: 200)
                 .cornerRadius(10)
-                .padding()
             Divider()
             Text("Detail view Test")
             Spacer()

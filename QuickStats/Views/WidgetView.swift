@@ -14,6 +14,7 @@ struct WidgetView: View {
         VStack(alignment: .center) {
             Text(widget.title)
                 .font(.title2)
+                .lineLimit(2)
             Text(widget.description)
                 .font(.caption)
             Spacer()
@@ -22,17 +23,20 @@ struct WidgetView: View {
             case .countdown:
                 CountdownView(date: widget.timestamp)
                     .font(.title)
+                    .lineLimit(1)
             default:
                 Text(widget.value.description)
                     .font(.title)
+                    .lineLimit(1)
                 Text(widget.timestamp.debugDescription)
+                    .lineLimit(1)
             }
 
         }
-        .minimumScaleFactor(0.5)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
         .border(widget.color, width: 5)
+
     }
 }
 
