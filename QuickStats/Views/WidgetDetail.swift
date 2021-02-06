@@ -18,6 +18,9 @@ struct WidgetDetail: View {
             Text("Detail view Test")
             Spacer()
             List {
+                if let url = widget.more {
+                    Link(url.absoluteString, destination: url)
+                }
                 if widget.type == .chart {
                     NavigationLink(destination: SampleView(widget: widget)) {
                         Label("Samples", systemImage: "chart.bar")
