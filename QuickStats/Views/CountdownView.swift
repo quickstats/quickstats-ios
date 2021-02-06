@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct CountdownView: View {
+    @EnvironmentObject var settings: UserSettings
+
     var date: Date
 
     @State private var color = Color.white
     @State private var elapsed = TimeInterval()
-
-    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     private func tick(tick: Date) {
         elapsed = Date().timeIntervalSince(date).rounded()
@@ -31,7 +31,7 @@ struct CountdownView: View {
     var body: some View {
         IntervalView(elapsed: elapsed)
             .foregroundColor(color)
-            .onReceive(timer, perform: tick)
+            .onReceive(settings.timer, perform: tick)
     }
 }
 

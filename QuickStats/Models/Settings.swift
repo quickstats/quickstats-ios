@@ -14,6 +14,8 @@ typealias Login = String
 class UserSettings: ObservableObject {
     private let keychain = Keychain(service: Bundle.main.bundleIdentifier!)
 
+    @Published var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     @AppStorage("login") var login: Login? {
         willSet {
             objectWillChange.send()

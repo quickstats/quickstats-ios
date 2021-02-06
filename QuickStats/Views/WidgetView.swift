@@ -28,7 +28,7 @@ struct WidgetView: View {
                 Text(widget.value.description)
                     .font(.title)
                     .lineLimit(1)
-                Text(widget.timestamp.debugDescription)
+                DateView(date: widget.timestamp)
                     .lineLimit(1)
             }
 

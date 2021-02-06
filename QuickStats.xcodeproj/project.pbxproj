@@ -27,6 +27,7 @@
 		876EA76A25CD6521004DF213 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876EA76925CD6521004DF213 /* Api.swift */; };
 		876EA77025CD67C6004DF213 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876EA76F25CD67C6004DF213 /* URLSession+Extensions.swift */; };
 		876EA78025CD6A22004DF213 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876EA77F25CD6A22004DF213 /* SettingsView.swift */; };
+		87D5087B25CE4C4E00921D2C /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5087A25CE4C4E00921D2C /* DateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		876EA76925CD6521004DF213 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		876EA76F25CD67C6004DF213 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		876EA77F25CD6A22004DF213 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		87D5087A25CE4C4E00921D2C /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				873C525B25CD79CC00B2F70E /* WidgetDetail.swift */,
 				876CC6AC25CD87350016949E /* CountdownView.swift */,
 				876CC6B125CD8A0D0016949E /* IntervalView.swift */,
+				87D5087A25CE4C4E00921D2C /* DateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			files = (
 				873C525C25CD79CC00B2F70E /* WidgetDetail.swift in Sources */,
 				876CC6B225CD8A0D0016949E /* IntervalView.swift in Sources */,
+				87D5087B25CE4C4E00921D2C /* DateView.swift in Sources */,
 				876EA77025CD67C6004DF213 /* URLSession+Extensions.swift in Sources */,
 				876EA74F25CD61E8004DF213 /* Settings.swift in Sources */,
 				876EA71F25CD6127004DF213 /* ContentView.swift in Sources */,
