@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8701B22C25CE6B780098196B /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8701B22B25CE6B780098196B /* SampleView.swift */; };
+		8701B23125CE6BEC0098196B /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8701B23025CE6BEC0098196B /* PreviewData.swift */; };
+		8701B23625CE6CC50098196B /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8701B23525CE6CC50098196B /* Sample.swift */; };
+		8701B24825CE72CF0098196B /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 8701B24725CE72CF0098196B /* SwiftUICharts */; };
 		873C524D25CD6D4200B2F70E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 873C524C25CD6D4200B2F70E /* KeychainAccess */; };
 		873C525225CD6F3300B2F70E /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C525125CD6F3300B2F70E /* WidgetView.swift */; };
 		873C525725CD745E00B2F70E /* WidgetFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C525625CD745E00B2F70E /* WidgetFetcher.swift */; };
@@ -48,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8701B22B25CE6B780098196B /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
+		8701B23025CE6BEC0098196B /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		8701B23525CE6CC50098196B /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		873C525125CD6F3300B2F70E /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		873C525625CD745E00B2F70E /* WidgetFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetFetcher.swift; sourceTree = "<group>"; };
 		873C525B25CD79CC00B2F70E /* WidgetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDetail.swift; sourceTree = "<group>"; };
@@ -82,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873C524D25CD6D4200B2F70E /* KeychainAccess in Frameworks */,
+				8701B24825CE72CF0098196B /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				876EA72325CD6128004DF213 /* Preview Assets.xcassets */,
+				8701B23025CE6BEC0098196B /* PreviewData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -169,6 +178,7 @@
 				876EA74E25CD61E8004DF213 /* Settings.swift */,
 				876EA76425CD64D0004DF213 /* Widget.swift */,
 				876EA76925CD6521004DF213 /* Api.swift */,
+				8701B23525CE6CC50098196B /* Sample.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +195,7 @@
 				876CC6AC25CD87350016949E /* CountdownView.swift */,
 				876CC6B125CD8A0D0016949E /* IntervalView.swift */,
 				87D5087A25CE4C4E00921D2C /* DateView.swift */,
+				8701B22B25CE6B780098196B /* SampleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +227,7 @@
 			name = QuickStats;
 			packageProductDependencies = (
 				873C524C25CD6D4200B2F70E /* KeychainAccess */,
+				8701B24725CE72CF0098196B /* SwiftUICharts */,
 			);
 			productName = QuickStats;
 			productReference = 876EA71925CD6127004DF213 /* QuickStats.app */;
@@ -290,6 +302,7 @@
 			mainGroup = 876EA71025CD6127004DF213;
 			packageReferences = (
 				873C524B25CD6D4200B2F70E /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				8701B24625CE72CF0098196B /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 876EA71A25CD6127004DF213 /* Products */;
 			projectDirPath = "";
@@ -343,9 +356,12 @@
 				873C525725CD745E00B2F70E /* WidgetFetcher.swift in Sources */,
 				876EA78025CD6A22004DF213 /* SettingsView.swift in Sources */,
 				873C525225CD6F3300B2F70E /* WidgetView.swift in Sources */,
+				8701B23625CE6CC50098196B /* Sample.swift in Sources */,
+				8701B22C25CE6B780098196B /* SampleView.swift in Sources */,
 				876EA75825CD6285004DF213 /* LoginView.swift in Sources */,
 				876EA76025CD6374004DF213 /* MainView.swift in Sources */,
 				876CC6AD25CD87350016949E /* CountdownView.swift in Sources */,
+				8701B23125CE6BEC0098196B /* PreviewData.swift in Sources */,
 				876EA71D25CD6127004DF213 /* QuickStatsApp.swift in Sources */,
 				876EA76A25CD6521004DF213 /* Api.swift in Sources */,
 				876EA76525CD64D0004DF213 /* Widget.swift in Sources */,
@@ -670,6 +686,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8701B24625CE72CF0098196B /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kfdm/ChartView";
+			requirement = {
+				branch = TimelineView;
+				kind = branch;
+			};
+		};
 		873C524B25CD6D4200B2F70E /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
@@ -681,6 +705,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8701B24725CE72CF0098196B /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8701B24625CE72CF0098196B /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
 		873C524C25CD6D4200B2F70E /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 873C524B25CD6D4200B2F70E /* XCRemoteSwiftPackageReference "KeychainAccess" */;

@@ -21,7 +21,7 @@ struct WidgetFilter<Content: View>: View {
                     Text(type.rawValue.capitalized).tag(WidgetType?.some(type))
                 }
             }
-            .pickerStyle(MenuPickerStyle())
+            .pickerStyle(SegmentedPickerStyle())
 
             content(widgets.filter { selectedFilter == nil ? true : selectedFilter == $0.type })
         }

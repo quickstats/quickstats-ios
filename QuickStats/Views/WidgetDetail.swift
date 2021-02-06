@@ -17,6 +17,13 @@ struct WidgetDetail: View {
             Divider()
             Text("Detail view Test")
             Spacer()
+            List {
+                if widget.type == .chart {
+                    NavigationLink(destination: SampleView(widget: widget)) {
+                        Label("Samples", systemImage: "chart.bar")
+                    }
+                }
+            }
         }
         .navigationTitle(widget.title)
     }

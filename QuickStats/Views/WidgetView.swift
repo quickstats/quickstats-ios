@@ -42,9 +42,6 @@ struct WidgetView: View {
 
 struct WidgetView_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetView(
-            widget: .init(
-                id: .init(), title: "test", description: "description", value: 100, type: .streak,
-                timestamp: .distantFuture))
+        WidgetView(widget: PreviewData.chart)
     }
 }
