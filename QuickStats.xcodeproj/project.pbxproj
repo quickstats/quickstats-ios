@@ -17,6 +17,8 @@
 		873C525C25CD79CC00B2F70E /* WidgetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C525B25CD79CC00B2F70E /* WidgetDetail.swift */; };
 		8759B72825D539BD0079957E /* WaypointListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B72725D539BD0079957E /* WaypointListView.swift */; };
 		8759B72D25D53A470079957E /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B72C25D53A470079957E /* Waypoint.swift */; };
+		8759B73325D53CDE0079957E /* SampleFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B73225D53CDE0079957E /* SampleFetch.swift */; };
+		8759B73B25D53D120079957E /* WaypointFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B73A25D53D120079957E /* WaypointFetch.swift */; };
 		876CC6A825CD86650016949E /* JSON+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CC6A725CD86650016949E /* JSON+Extensions.swift */; };
 		876CC6AD25CD87350016949E /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CC6AC25CD87350016949E /* CountdownView.swift */; };
 		876CC6B225CD8A0D0016949E /* IntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CC6B125CD8A0D0016949E /* IntervalView.swift */; };
@@ -62,6 +64,8 @@
 		873C525B25CD79CC00B2F70E /* WidgetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDetail.swift; sourceTree = "<group>"; };
 		8759B72725D539BD0079957E /* WaypointListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointListView.swift; sourceTree = "<group>"; };
 		8759B72C25D53A470079957E /* Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
+		8759B73225D53CDE0079957E /* SampleFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleFetch.swift; sourceTree = "<group>"; };
+		8759B73A25D53D120079957E /* WaypointFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointFetch.swift; sourceTree = "<group>"; };
 		876CC6A725CD86650016949E /* JSON+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON+Extensions.swift"; sourceTree = "<group>"; };
 		876CC6AC25CD87350016949E /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		876CC6B125CD8A0D0016949E /* IntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalView.swift; sourceTree = "<group>"; };
@@ -114,6 +118,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8759B73125D53CCE0079957E /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				873C525625CD745E00B2F70E /* WidgetFetcher.swift */,
+				8759B73225D53CDE0079957E /* SampleFetch.swift */,
+				8759B73A25D53D120079957E /* WaypointFetch.swift */,
+			);
+			path = Query;
+			sourceTree = "<group>";
+		};
 		876EA71025CD6127004DF213 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +151,7 @@
 		876EA71B25CD6127004DF213 /* QuickStats */ = {
 			isa = PBXGroup;
 			children = (
+				8759B73125D53CCE0079957E /* Query */,
 				876EA76E25CD67BA004DF213 /* Extensions */,
 				876EA75625CD627B004DF213 /* Views */,
 				876EA74D25CD61DE004DF213 /* Models */,
@@ -195,7 +210,6 @@
 				876EA75F25CD6374004DF213 /* MainView.swift */,
 				876EA77F25CD6A22004DF213 /* SettingsView.swift */,
 				873C525125CD6F3300B2F70E /* WidgetView.swift */,
-				873C525625CD745E00B2F70E /* WidgetFetcher.swift */,
 				873C525B25CD79CC00B2F70E /* WidgetDetail.swift */,
 				876CC6AC25CD87350016949E /* CountdownView.swift */,
 				876CC6B125CD8A0D0016949E /* IntervalView.swift */,
@@ -372,6 +386,8 @@
 				8759B72D25D53A470079957E /* Waypoint.swift in Sources */,
 				876EA71D25CD6127004DF213 /* QuickStatsApp.swift in Sources */,
 				876EA76A25CD6521004DF213 /* Api.swift in Sources */,
+				8759B73325D53CDE0079957E /* SampleFetch.swift in Sources */,
+				8759B73B25D53D120079957E /* WaypointFetch.swift in Sources */,
 				876EA76525CD64D0004DF213 /* Widget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
