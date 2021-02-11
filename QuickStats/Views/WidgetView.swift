@@ -40,8 +40,10 @@ struct WidgetView: View {
     }
 }
 
-struct WidgetView_Previews: PreviewProvider {
-    static var previews: some View {
-        WidgetView(widget: PreviewData.chart)
+#if DEBUG
+    struct WidgetView_Previews: PreviewProvider {
+        static var previews: some View {
+            WidgetView(widget: PreviewData.chart)
+        }
     }
-}
+#endif

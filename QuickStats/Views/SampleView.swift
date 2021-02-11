@@ -64,11 +64,13 @@ struct SampleView: View {
     }
 }
 
-struct SampleView_Previews: PreviewProvider {
-    static var previews: some View {
-        SampleView(widget: PreviewData.chart)
+#if DEBUG
+    struct SampleView_Previews: PreviewProvider {
+        static var previews: some View {
+            SampleView(widget: PreviewData.chart)
+        }
     }
-}
+#endif
 
 extension ChartData {
     public convenience init(from data: [Sample]) {
