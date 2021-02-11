@@ -13,7 +13,10 @@ struct SampleView: View {
 
     var body: some View {
         VStack {
-            Spacer()
+            WidgetView(widget: widget)
+                .frame(width: 200, height: 200)
+                .cornerRadius(10)
+            Divider()
             SampleFetch(widget: widget) { samples in
                 TimelineChart(data: ChartData(from: samples.wrappedValue))
             }

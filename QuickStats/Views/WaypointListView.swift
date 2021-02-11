@@ -10,6 +10,10 @@ import SwiftUI
 struct WaypointListView: View {
     var widget: Widget
     var body: some View {
+        WidgetView(widget: widget)
+            .frame(width: 200, height: 200)
+            .cornerRadius(10)
+        Divider()
         WaypointFetch(widget: widget) { waypoints in
             ForEach(waypoints.wrappedValue) { waypoint in
                 HStack {
@@ -20,6 +24,7 @@ struct WaypointListView: View {
                 }
             }
         }
+        Spacer()
     }
 }
 
