@@ -15,6 +15,8 @@
 		873C525225CD6F3300B2F70E /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C525125CD6F3300B2F70E /* WidgetView.swift */; };
 		873C525725CD745E00B2F70E /* WidgetFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C525625CD745E00B2F70E /* WidgetFetcher.swift */; };
 		873C525C25CD79CC00B2F70E /* WidgetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C525B25CD79CC00B2F70E /* WidgetDetail.swift */; };
+		8759B72825D539BD0079957E /* WaypointListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B72725D539BD0079957E /* WaypointListView.swift */; };
+		8759B72D25D53A470079957E /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8759B72C25D53A470079957E /* Waypoint.swift */; };
 		876CC6A825CD86650016949E /* JSON+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CC6A725CD86650016949E /* JSON+Extensions.swift */; };
 		876CC6AD25CD87350016949E /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CC6AC25CD87350016949E /* CountdownView.swift */; };
 		876CC6B225CD8A0D0016949E /* IntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CC6B125CD8A0D0016949E /* IntervalView.swift */; };
@@ -58,6 +60,8 @@
 		873C525125CD6F3300B2F70E /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		873C525625CD745E00B2F70E /* WidgetFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetFetcher.swift; sourceTree = "<group>"; };
 		873C525B25CD79CC00B2F70E /* WidgetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDetail.swift; sourceTree = "<group>"; };
+		8759B72725D539BD0079957E /* WaypointListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointListView.swift; sourceTree = "<group>"; };
+		8759B72C25D53A470079957E /* Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
 		876CC6A725CD86650016949E /* JSON+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON+Extensions.swift"; sourceTree = "<group>"; };
 		876CC6AC25CD87350016949E /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		876CC6B125CD8A0D0016949E /* IntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalView.swift; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 				876EA76425CD64D0004DF213 /* Widget.swift */,
 				876EA76925CD6521004DF213 /* Api.swift */,
 				8701B23525CE6CC50098196B /* Sample.swift */,
+				8759B72C25D53A470079957E /* Waypoint.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				876CC6B125CD8A0D0016949E /* IntervalView.swift */,
 				87D5087A25CE4C4E00921D2C /* DateView.swift */,
 				8701B22B25CE6B780098196B /* SampleView.swift */,
+				8759B72725D539BD0079957E /* WaypointListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -357,11 +363,13 @@
 				876EA78025CD6A22004DF213 /* SettingsView.swift in Sources */,
 				873C525225CD6F3300B2F70E /* WidgetView.swift in Sources */,
 				8701B23625CE6CC50098196B /* Sample.swift in Sources */,
+				8759B72825D539BD0079957E /* WaypointListView.swift in Sources */,
 				8701B22C25CE6B780098196B /* SampleView.swift in Sources */,
 				876EA75825CD6285004DF213 /* LoginView.swift in Sources */,
 				876EA76025CD6374004DF213 /* MainView.swift in Sources */,
 				876CC6AD25CD87350016949E /* CountdownView.swift in Sources */,
 				8701B23125CE6BEC0098196B /* PreviewData.swift in Sources */,
+				8759B72D25D53A470079957E /* Waypoint.swift in Sources */,
 				876EA71D25CD6127004DF213 /* QuickStatsApp.swift in Sources */,
 				876EA76A25CD6521004DF213 /* Api.swift in Sources */,
 				876EA76525CD64D0004DF213 /* Widget.swift in Sources */,

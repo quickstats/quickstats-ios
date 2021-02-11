@@ -26,6 +26,11 @@ struct WidgetDetail: View {
                         Label("Samples", systemImage: "chart.bar")
                     }
                 }
+                if widget.type == .location {
+                    NavigationLink(destination: WaypointListView(widget: widget)) {
+                        Label("Waypoints", systemImage: "location")
+                    }
+                }
             }
         }
         .navigationTitle(widget.title)
